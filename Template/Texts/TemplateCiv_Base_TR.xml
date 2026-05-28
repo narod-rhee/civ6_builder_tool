@@ -161,50 +161,41 @@
 		<Row Tag="LOC_CITIZEN_DANIEL" Language="ko_KR">
 			<Text>다니엘</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_CHAPALA" Language="ko_KR">
-			<Text>차팔라 호수</Text>
+		<Row Tag="LOC_NAMED_RIVER_SWIFT" Language="ko_KR">
+			<Text>빠른 강</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_PATZCUARO" Language="ko_KR">
-			<Text>파츠쿠아로 호수</Text>
+		<Row Tag="LOC_NAMED_RIVER_CALM" Language="ko_KR">
+			<Text>고요한 강</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_BACALAR" Language="ko_KR">
-			<Text>바칼라르 호수</Text>
+		<Row Tag="LOC_NAMED_LAKE_CRYSTAL" Language="ko_KR">
+			<Text>크리스털 호수</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_LAGUNA_CATEMACO" Language="ko_KR">
-			<Text>카테마코 호수</Text>
+		<Row Tag="LOC_NAMED_LAKE_SHADOW" Language="ko_KR">
+			<Text>그림자 호수</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_EL_CARACOL" Language="ko_KR">
-			<Text>엘 카라콜 호수</Text>
+		<Row Tag="LOC_NAMED_SEA_AZURE" Language="ko_KR">
+			<Text>청색 바다</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME" Language="ko_KR">
-			<Text>캘리포니아만</Text>
+		<Row Tag="LOC_NAMED_SEA_EMERALD" Language="ko_KR">
+			<Text>에메랄드 바다</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME" Language="ko_KR">
-			<Text>멕시코만</Text>
+		<Row Tag="LOC_NAMED_DESERT_GOLDEN" Language="ko_KR">
+			<Text>황금 사막</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_SONORA" Language="ko_KR">
-			<Text>소노라 사막</Text>
+		<Row Tag="LOC_NAMED_DESERT_SILENT" Language="ko_KR">
+			<Text>조용한 사막</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_LA_GUAJIRA" Language="ko_KR">
-			<Text>라과히라 사막</Text>
+		<Row Tag="LOC_NAMED_VOLCANO_ETERNAL" Language="ko_KR">
+			<Text>영원한 봉우리</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_SECHURA" Language="ko_KR">
-			<Text>세추라 사막</Text>
+		<Row Tag="LOC_NAMED_VOLCANO_FIRE" Language="ko_KR">
+			<Text>불길 봉우리</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA" Language="ko_KR">
-			<Text>피코 데 오리사바</Text>
+		<Row Tag="LOC_NAMED_MOUNTAIN_HIGH" Language="ko_KR">
+			<Text>높은 산</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_TAJUMULCO" Language="ko_KR">
-			<Text>타후물코 화산</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_TACANA" Language="ko_KR">
-			<Text>타카나 화산</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_SANTIAGUITO" Language="ko_KR">
-			<Text>산티아기토 화산</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_CHAPARRASTIQUE" Language="ko_KR">
-			<Text>차파라스티케 화산</Text>
+		<Row Tag="LOC_NAMED_MOUNTAIN_RIDGE" Language="ko_KR">
+			<Text>능선 산</Text>
 		</Row>
 		<Row Tag="LOC_PROMOTION_TEMPLATE_UNIT_DESCRIPTION" Language="ko_KR">
 			<Text>템플릿 유닛 클래스에 사용 가능한 진급입니다. 각 진급은 전투, 이동 또는 원거리 효과를 향상시킵니다.</Text>

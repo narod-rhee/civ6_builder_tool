@@ -34,6 +34,14 @@ from cropper import (
     remove_background_from_corners,
     validate_recipe,
 )
+from xml_profile_extractor import (
+    ExtractorError,
+    extract_path as extract_xml_profile,
+    load_profile as load_xml_profile,
+    profile_to_copilot_prefill,
+    summarize_profile as summarize_xml_profile,
+    write_json as write_xml_json,
+)
 
 
 ROOT = Path(__file__).resolve().parent
@@ -330,6 +338,15 @@ class CropperFrontendHandler(BaseHTTPRequestHandler):
             if parsed.path == "/api/template-copilot":
                 self.handle_template_copilot()
                 return
+            if parsed.path == "/api/xml-extractor/extract":
+                self.handle_xml_extractor_extract()
+                return
+            if parsed.path == "/api/xml-extractor/summarize":
+                self.handle_xml_extractor_summarize()
+                return
+            if parsed.path == "/api/xml-extractor/copilot":
+                self.handle_xml_extractor_copilot()
+                return
             if parsed.path == "/api/novelai-prompt":
                 self.handle_novelai_prompt()
                 return
@@ -343,7 +360,7 @@ class CropperFrontendHandler(BaseHTTPRequestHandler):
                 self.handle_server_pool_stop()
                 return
             self.send_error(404, "Not found")
-        except (CropperError, FrontendError, OSError, RuntimeError, ValueError) as exc:
+        except (CropperError, ExtractorError, FrontendError, OSError, RuntimeError, ValueError) as exc:
             self.send_json({"status": "error", "message": str(exc)}, status=400)
 
     def handle_generate(self) -> None:
@@ -410,6 +427,67 @@ class CropperFrontendHandler(BaseHTTPRequestHandler):
         request = self.read_json_body()
         payload = generate_template_copilot_files(request, self.server.settings)
         self.send_json(payload)
+
+    def handle_xml_extractor_extract(self) -> None:
+        request = self.read_json_body()
+        source_path = resolve_input_path(str(request.get("path") or ""))
+        out_path = resolve_json_output_path(
+            str(request.get("out") or "output/xml_extractor/extracted_profile.json"),
+            "extracted_profile.json",
+        )
+        profile = extract_xml_profile(source_path, out_path)
+        self.send_json(
+            {
+                "status": "success",
+                "output_path": str(out_path),
+                "output_url": file_url(out_path),
+                "summary": profile.get("summary") or summarize_xml_profile(profile, print_output=False),
+                "warnings": profile.get("warnings", []),
+                "file_count": len(profile.get("files", [])),
+            }
+        )
+
+    def handle_xml_extractor_summarize(self) -> None:
+        request = self.read_json_body()
+        profile_path = resolve_input_path(str(request.get("profile") or ""))
+        profile = load_xml_profile(profile_path)
+        self.send_json(
+            {
+                "status": "success",
+                "profile_path": str(profile_path),
+                "summary": summarize_xml_profile(profile, print_output=False),
+                "warnings": profile.get("warnings", []),
+            }
+        )
+
+    def handle_xml_extractor_copilot(self) -> None:
+        request = self.read_json_body()
+        profile_path = resolve_input_path(str(request.get("profile") or ""))
+        out_path = resolve_json_output_path(
+            str(request.get("out") or "output/xml_extractor/copilot_prefill.json"),
+            "copilot_prefill.json",
+        )
+        profile = load_xml_profile(profile_path)
+        prefill = profile_to_copilot_prefill(profile)
+        write_xml_json(out_path, prefill)
+        self.send_json(
+            {
+                "status": "success",
+                "output_path": str(out_path),
+                "output_url": file_url(out_path),
+                "prefill": prefill,
+                "summary": {
+                    "civilizations": prefill.get("civilization_names", []),
+                    "leaders": prefill.get("leader_names", []),
+                    "units": prefill.get("unit_names", []),
+                    "buildings": prefill.get("building_names", []),
+                    "districts": prefill.get("district_names", []),
+                    "improvements": prefill.get("improvement_names", []),
+                    "localized_text_count": len(prefill.get("localization_keys", [])),
+                    "warnings": prefill.get("warnings", []),
+                },
+            }
+        )
 
     def handle_novelai_prompt(self) -> None:
         request = self.read_json_body()
@@ -969,8 +1047,9 @@ def generate_template_copilot_files(request: dict[str, Any], settings: dict[str,
     output_dir = resolve_template_output_dir(str(request.get("output_dir") or DEFAULT_TEMPLATE_OUTPUT))
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    use_api = bool(request.get("use_api", True))
     brief = str(request.get("brief") or "").strip()
-    if not brief:
+    if use_api and not brief:
         raise FrontendError("Describe what the template should become.")
 
     manual_replacements = request.get("manual_replacements", {})
@@ -984,7 +1063,15 @@ def generate_template_copilot_files(request: dict[str, Any], settings: dict[str,
     if output_strategy not in {"merge", "separate"}:
         raise FrontendError("output_strategy must be 'merge' or 'separate'.")
 
-    ai_payload = create_template_replacement_plan(brief, context, settings)
+    if use_api:
+        ai_payload = create_template_replacement_plan(brief, context, settings)
+    else:
+        ai_payload = {
+            "file_prefix": filename_prefix_from_identifier(identifier_from_name(str(context.get("fields", {}).get("mod_code") or "GeneratedCiv"))),
+            "replacements": {},
+            "variants": [],
+            "notes": ["OpenAI API disabled; generated deterministic IDs, manual replacements, and Template ID JSON only."],
+        }
     ai_variants = normalize_template_variants(ai_payload, output_strategy)
     variants = combine_ai_and_entity_variants(ai_payload, ai_variants, context, request)
 
@@ -1022,6 +1109,19 @@ def generate_template_copilot_files(request: dict[str, Any], settings: dict[str,
 
     if output_strategy == "merge" and len(variants) > 1:
         generated_files.extend(write_merged_template_variants(selected_paths, output_dir, variants))
+
+    id_manifest = build_template_id_manifest(context, request)
+    id_manifest_path = output_dir / "template_ids.json"
+    id_manifest_path.write_text(json.dumps(id_manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    generated_files.append(
+        {
+            "path": str(id_manifest_path),
+            "url": file_url(id_manifest_path),
+            "template": "Template ID manifest",
+            "variant": "ids",
+            "replacement_count": 0,
+        }
+    )
 
     ai_notes = ai_payload.get("notes", [])
     if not isinstance(ai_notes, list):
@@ -1111,9 +1211,10 @@ def build_entity_variants(context: dict[str, Any], request: dict[str, Any]) -> l
             civilization_name = binding.get("civilization") or pick_index(civilizations, index) or "Generated Civilization"
             leader_name = binding.get("name") or pick_index(leaders, index) or "Generated Leader"
             civ_suffix = identifier_from_name(civilization_name, fallback=mod_code)
-            leader_suffix = identifier_from_name(leader_name, fallback=f"{mod_code}_LEADER")
+            leader_suffix = leader_suffix_from_id_or_name(binding.get("leader_id", ""), leader_name, mod_code)
             variant_name = sanitize_filename(f"{civ_suffix}_{leader_suffix}")
             replacements = deterministic_entity_replacements(civilization_name, leader_name, civ_suffix, leader_suffix, mod_code)
+            replacements.update(deterministic_profile_replacements(profile_for_civilization(context, civilization_name), civ_suffix))
             for key, value in (request.get("manual_replacements") or {}).items():
                 replacements[str(key)] = str(value)
             variants.append(
@@ -1131,9 +1232,10 @@ def build_entity_variants(context: dict[str, Any], request: dict[str, Any]) -> l
         civilization_name = pick_index(civilizations, index) or pick_index(civilizations, 0) or "Generated Civilization"
         leader_name = pick_index(leaders, index) or pick_index(leaders, 0) or "Generated Leader"
         civ_suffix = identifier_from_name(civilization_name, fallback=mod_code)
-        leader_suffix = identifier_from_name(leader_name, fallback=f"{mod_code}_LEADER")
+        leader_suffix = leader_suffix_from_id_or_name("", leader_name, mod_code)
         variant_name = sanitize_filename(f"{civ_suffix}_{leader_suffix}" if civilizations and leaders else civ_suffix if civilizations else leader_suffix)
         replacements = deterministic_entity_replacements(civilization_name, leader_name, civ_suffix, leader_suffix, mod_code)
+        replacements.update(deterministic_profile_replacements(profile_for_civilization(context, civilization_name), civ_suffix))
         for key, value in (request.get("manual_replacements") or {}).items():
             replacements[str(key)] = str(value)
         variants.append(
@@ -1146,6 +1248,51 @@ def build_entity_variants(context: dict[str, Any], request: dict[str, Any]) -> l
     return variants
 
 
+def profile_for_civilization(context: dict[str, Any], civilization_name: str) -> dict[str, Any]:
+    for profile in context.get("civilization_profiles") or []:
+        if str(profile.get("name") or "").strip() == civilization_name:
+            return profile
+    return {}
+
+
+def deterministic_profile_replacements(profile: dict[str, Any], civ_suffix: str) -> dict[str, str]:
+    replacements: dict[str, str] = {}
+    if not profile:
+        return replacements
+    if profile.get("demonym"):
+        replacements["LOC_CIVILIZATION_TEMPLATE_ADJECTIVE"] = f"LOC_CIVILIZATION_{civ_suffix}_ADJECTIVE"
+        replacements["Template citizen adjective"] = str(profile["demonym"])
+    first_by_kind = {
+        "UNIT": parse_entity_list(profile.get("unit_names", [])),
+        "BUILDING": parse_entity_list(profile.get("building_names", [])),
+        "IMPROVEMENT": parse_entity_list(profile.get("improvement_names", [])),
+        "DISTRICT": parse_entity_list(profile.get("district_names", [])),
+        "GOVERNOR": parse_entity_list(profile.get("governor_names", [])),
+    }
+    for kind, names in first_by_kind.items():
+        if not names:
+            continue
+        suffix = identifier_from_name(names[0], fallback=f"{civ_suffix}_{kind}")
+        replacements[f"{kind}_TEMPLATE"] = f"{kind}_{suffix}"
+        replacements[f"LOC_{kind}_TEMPLATE_NAME"] = f"LOC_{kind}_{suffix}_NAME"
+        replacements[f"LOC_{kind}_TEMPLATE_DESCRIPTION"] = f"LOC_{kind}_{suffix}_DESCRIPTION"
+        replacements[f"ICON_{kind}_TEMPLATE"] = f"ICON_{kind}_{suffix}"
+        if kind == "DISTRICT":
+            replacements["LOC_DISTRICT_TEMPLATE_HOLY_SITE_NAME"] = f"LOC_DISTRICT_{suffix}_NAME"
+            replacements["LOC_DISTRICT_TEMPLATE_HOLY_SITE_DESCRIPTION"] = f"LOC_DISTRICT_{suffix}_DESCRIPTION"
+    return replacements
+
+
+def leader_suffix_from_id_or_name(leader_id: str, leader_name: str, mod_code: str) -> str:
+    if leader_id.strip():
+        cleaned_id = identifier_from_name(leader_id, fallback="")
+        if cleaned_id.startswith("LEADER_") and len(cleaned_id) > len("LEADER_"):
+            return cleaned_id.removeprefix("LEADER_")
+        if cleaned_id:
+            return cleaned_id
+    return identifier_from_name(leader_name, fallback=f"{mod_code}_LEADER")
+
+
 def normalized_leader_bindings(value: Any, civilizations: list[str], leaders: list[str]) -> list[dict[str, str]]:
     if not isinstance(value, list):
         return []
@@ -1154,6 +1301,7 @@ def normalized_leader_bindings(value: Any, civilizations: list[str], leaders: li
         if not isinstance(item, dict):
             continue
         leader_name = str(item.get("name") or pick_index(leaders, index) or "").strip()
+        leader_id = str(item.get("leader_id") or "").strip()
         civilization_name = str(item.get("civilization") or "").strip()
         if not civilization_name:
             try:
@@ -1165,6 +1313,7 @@ def normalized_leader_bindings(value: Any, civilizations: list[str], leaders: li
             bindings.append(
                 {
                     "name": leader_name,
+                    "leader_id": leader_id,
                     "civilization": civilization_name,
                 }
             )
@@ -1459,6 +1608,22 @@ def resolve_template_output_dir(value: str) -> Path:
     return output_dir
 
 
+def resolve_input_path(value: str) -> Path:
+    if not value.strip():
+        raise FrontendError("Enter a file or folder path first.")
+    return Path(value.strip()).expanduser().resolve()
+
+
+def resolve_json_output_path(value: str, default_name: str) -> Path:
+    raw_value = value.strip()
+    target = Path(raw_value or f"output/xml_extractor/{default_name}")
+    if not target.is_absolute():
+        target = ROOT / target
+    if target.suffix.lower() != ".json":
+        target = target / default_name
+    return target.resolve()
+
+
 def build_template_context(selected_paths: list[Path], request: dict[str, Any]) -> dict[str, Any]:
     placeholder_set: set[str] = set()
     previews = []
@@ -1482,6 +1647,7 @@ def build_template_context(selected_paths: list[Path], request: dict[str, Any]) 
         "improvements": parse_entity_list(request.get("improvement_names", request.get("improvement_name", ""))),
         "districts": parse_entity_list(request.get("district_names", request.get("district_name", ""))),
         "governors": parse_entity_list(request.get("governor_names", "")),
+        "named_geography": parse_entity_list(request.get("named_geography", "")),
     }
     return {
         "fields": {
@@ -1524,12 +1690,158 @@ def normalize_civilization_profiles(value: Any) -> list[dict[str, Any]]:
             {
                 "index": index,
                 "name": str(item.get("name") or "").strip(),
+                "demonym": str(item.get("demonym") or "").strip(),
                 "city_names": parse_entity_list(item.get("city_names", [])),
                 "citizen_names": parse_entity_list(item.get("citizen_names", [])),
                 "governor_names": parse_entity_list(item.get("governor_names", []))[:8],
+                "governor_details": str(item.get("governor_details") or "").strip(),
+                "named_geography": str(item.get("named_geography") or "").strip(),
+                "unit_names": parse_entity_list(item.get("unit_names", []))[:5],
+                "building_names": parse_entity_list(item.get("building_names", []))[:5],
+                "improvement_names": parse_entity_list(item.get("improvement_names", []))[:5],
+                "district_names": parse_entity_list(item.get("district_names", []))[:5],
+                "unique_details": normalize_unique_details(item.get("unique_details")),
             }
         )
     return profiles
+
+
+def normalize_unique_details(value: Any) -> dict[str, str]:
+    if not isinstance(value, dict):
+        return {"units": "", "buildings": "", "improvements": "", "districts": ""}
+    return {
+        "units": str(value.get("units") or "").strip(),
+        "buildings": str(value.get("buildings") or "").strip(),
+        "improvements": str(value.get("improvements") or "").strip(),
+        "districts": str(value.get("districts") or "").strip(),
+    }
+
+
+def build_template_id_manifest(context: dict[str, Any], request: dict[str, Any]) -> dict[str, Any]:
+    mod_code = identifier_from_name(str(context.get("fields", {}).get("mod_code") or "Generated Civ"))
+    profiles = context.get("civilization_profiles") or []
+    if not profiles:
+        profiles = [
+            {"index": index, "name": name}
+            for index, name in enumerate(context.get("entities", {}).get("civilizations") or [])
+        ]
+    leader_bindings = context.get("leader_bindings") or []
+    leaders: list[dict[str, Any]] = []
+    civilizations: list[dict[str, Any]] = []
+
+    for index, profile in enumerate(profiles):
+        civ_name = str(profile.get("name") or f"Generated Civilization {index + 1}")
+        civ_suffix = identifier_from_name(civ_name, fallback=mod_code)
+        civ_id = f"CIVILIZATION_{civ_suffix}"
+        civ_entry: dict[str, Any] = {
+            "index": index,
+            "name": civ_name,
+            "id": civ_id,
+            "loc": {
+                "name": f"LOC_CIVILIZATION_{civ_suffix}_NAME",
+                "description": f"LOC_CIVILIZATION_{civ_suffix}_DESCRIPTION",
+                "adjective": f"LOC_CIVILIZATION_{civ_suffix}_ADJECTIVE",
+            },
+            "icon": f"ICON_CIVILIZATION_{civ_suffix}",
+            "atlas": f"ATLAS_ICON_CIVILIZATION_{civ_suffix}",
+            "cropper_options": [
+                cropper_option("Civilization icons", "civilization_icons", f"ICON_CIVILIZATION_{civ_suffix}", "output/civilization_icons"),
+            ],
+            "demonym": profile.get("demonym", ""),
+            "city_names": profile.get("city_names", []),
+            "citizen_names": profile.get("citizen_names", []),
+            "governor_details": profile.get("governor_details", ""),
+            "named_geography": profile.get("named_geography", ""),
+            "unique_details": profile.get("unique_details", {}),
+            "units": named_asset_manifest_items(profile.get("unit_names", []), "UNIT", "unit_icons", "output/unit_icons", unit_icon_base=True),
+            "buildings": named_asset_manifest_items(profile.get("building_names", []), "BUILDING", "building_icons", "output/building_icons"),
+            "improvements": named_asset_manifest_items(profile.get("improvement_names", []), "IMPROVEMENT", "building_icons", "output/improvement_icons"),
+            "districts": named_asset_manifest_items(profile.get("district_names", []), "DISTRICT", "civilization_icons", "output/district_icons"),
+            "governors": named_asset_manifest_items(profile.get("governor_names", []), "GOVERNOR", "governor_icons", "output/governor_icons", icon_prefix="ICON_GOVERNOR"),
+        }
+        civilizations.append(civ_entry)
+
+    for index, binding in enumerate(leader_bindings):
+        leader_name = str(binding.get("name") or f"Leader {index + 1}")
+        civ_name = str(binding.get("civilization") or "")
+        leader_suffix = leader_suffix_from_id_or_name(str(binding.get("leader_id") or ""), leader_name, mod_code)
+        leader_id = f"LEADER_{leader_suffix}"
+        leaders.append(
+            {
+                "index": index,
+                "name": leader_name,
+                "id": leader_id,
+                "civilization": civ_name,
+                "loc": {
+                    "name": f"LOC_LEADER_{leader_suffix}_NAME",
+                    "quote": f"LOC_LEADER_{leader_suffix}_QUOTE",
+                    "loading_info": f"LOC_LOADING_INFO_LEADER_{leader_suffix}",
+                    "diplomacy_prefix": f"LOC_DIPLO_*_LEADER_{leader_suffix}_ANY",
+                },
+                "trait": f"TRAIT_LEADER_{leader_suffix}_ABILITY",
+                "agenda": f"AGENDA_{leader_suffix}",
+                "icon": f"ICON_LEADER_{leader_suffix}",
+                "atlas": f"ATLAS_ICON_{leader_suffix}_LEADER",
+                "fallback_neutral": f"FALLBACK_NEUTRAL_LEADER_{leader_suffix}",
+                "portrait": f"LEADER_{leader_suffix}_NEUTRAL",
+                "portrait_background": f"LEADER_{leader_suffix}_BACKGROUND",
+                "cropper_options": [
+                    cropper_option("Leader icons", "leader_icons", f"ICON_LEADER_{leader_suffix}", "output/leader_icons"),
+                    cropper_option("Leader portrait + fallback neutral", "leader_portraits", f"ICON_LEADER_{leader_suffix}", "output/leader_portraits"),
+                ],
+            }
+        )
+
+    return {
+        "schema": "icon_forge_template_ids_v1",
+        "mod_code": mod_code,
+        "notes": [
+            "Load this file in the Cropper page to auto-fill profile and base_name.",
+            "Leader LOC pattern comes from LEADER_TEMPLATE_LEADER placeholders: LOC_LEADER_*_NAME, LOC_LOADING_INFO_LEADER_*, and LOC_DIPLO_*_LEADER_*_ANY.",
+        ],
+        "civilizations": civilizations,
+        "leaders": leaders,
+    }
+
+
+def named_asset_manifest_items(
+    names: Any,
+    id_prefix: str,
+    cropper_mode: str,
+    output_dir: str,
+    icon_prefix: str | None = None,
+    unit_icon_base: bool = False,
+) -> list[dict[str, Any]]:
+    items = []
+    for name in parse_entity_list(names)[:5 if id_prefix in {"UNIT", "BUILDING", "IMPROVEMENT", "DISTRICT"} else 8]:
+        suffix = identifier_from_name(name, fallback=id_prefix)
+        item_id = f"{id_prefix}_{suffix}"
+        icon_id = f"{icon_prefix or 'ICON_' + id_prefix}_{suffix}"
+        base_name = f"{filename_prefix_from_identifier(suffix)}UnitAtlas" if unit_icon_base else icon_id
+        items.append(
+            {
+                "label": name,
+                "id": item_id,
+                "loc": {
+                    "name": f"LOC_{id_prefix}_{suffix}_NAME",
+                    "description": f"LOC_{id_prefix}_{suffix}_DESCRIPTION",
+                },
+                "icon": icon_id,
+                "cropper_options": [
+                    cropper_option(f"{id_prefix.title()} icons", cropper_mode, base_name, output_dir),
+                ],
+            }
+        )
+    return items
+
+
+def cropper_option(label: str, mode: str, base_name: str, output_dir: str) -> dict[str, str]:
+    return {
+        "label": label,
+        "mode": mode,
+        "base_name": base_name,
+        "output_dir": output_dir,
+    }
 
 
 def create_template_replacement_plan(
@@ -1558,6 +1870,8 @@ def create_template_replacement_plan(
             "Keep LOC_ tags as uppercase underscore identifiers.",
             "Generate natural in-game English text for visible localization values.",
             "Use civilization_profiles to keep each civilization's city names, citizen/demonym names, and unique governors separated.",
+            "Governor details are optional and include governor title, short title, identity pressure, portrait IDs, traits, promotion sets, prereqs, promotion modifiers, and LOC text.",
+            "Named geography is a compulsory core civilization component in TemplateCiv_Civilization plus Base text LOC rows: rivers, lakes, seas, deserts, volcanoes, and mountains must stay tied to the owning civilization.",
             "Use leader_bindings so each leader is attached to the intended civilization; do not randomly pair leaders and civilizations.",
             "District names belong to district XML, district modifiers, projects, icons, and localization when those files are selected.",
             "If output_strategy is separate and there are multiple leaders/civilizations/units/buildings/improvements/governors, return variants.",

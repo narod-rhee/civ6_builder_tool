@@ -22,10 +22,11 @@
         </div>
         <div class="topActions">
           <nav class="toolNav" aria-label="Tools">
-            <button type="button" class="active" data-page="cropper">Cropper</button>
-            <button type="button" data-page="templates">Templates</button>
-            <button type="button" data-page="imageLab">Image Lab</button>
-            <button type="button" data-page="agent">Agent</button>
+            <button type="button" class="active" data-page="cropper" data-icon="CR">Cropper</button>
+            <button type="button" data-page="templates" data-icon="TM">Templates</button>
+            <button type="button" data-page="extractor" data-icon="XR">Extractor</button>
+            <button type="button" data-page="imageLab" data-icon="IL">Image Lab</button>
+            <button type="button" data-page="agent" data-icon="AG">Agent</button>
           </nav>
           <button type="button" id="themeToggle">Dark</button>
           <div class="status" id="status">Cropper loading</div>
@@ -39,6 +40,19 @@
               <input id="imageInput" name="image" type="file" accept="image/*" required>
               <span>Choose source image</span>
               <strong id="fileName">No file selected</strong>
+            </label>
+
+            <label class="uploadLine">
+              Load Template ID JSON
+              <input id="idManifestInput" type="file" accept=".json,application/json">
+              <small class="fieldHelp">Load `template_ids.json` from Template Copilot, then choose a civ, leader, unit, building, district, improvement, or governor to fill the cropper profile and base name.</small>
+            </label>
+
+            <label>
+              Saved ID target
+              <select id="idManifestSelect" disabled>
+                <option value="">Load Template ID JSON first</option>
+              </select>
             </label>
 
           <div class="grid two">
@@ -160,8 +174,10 @@
               <summary>Input guide</summary>
               <p>Fill only the fields relevant to the files you selected. Pick a file group on the right first, then describe the exact gameplay idea in Copilot brief. Unified output keeps multiple civs/leaders as rows inside the same generated files.</p>
               <ul>
-                <li>Core Civ: root template files for civilizations, leaders, agendas, colors, config, units, buildings, improvements, districts, governors, projects, religion, and moments SQL.</li>
+                <li>Core Civ: compulsory civilization definition, city/citizen names, Named geography rows inside Civilization.xml, base LOC text, config, colors, icons, and core ArtDefs.</li>
                 <li>Districts: district XML plus district modifiers. Use it when adding a unique district or district-based ability.</li>
+                <li>Governors: optional governor definitions, promotion tree, promotion modifiers, governor LOC, and governor icon rows.</li>
+                <li>Named geography: compulsory Civilization.xml series for rivers, lakes, seas, deserts, volcanoes, and mountains, with matching Base text LOC.</li>
                 <li>Texts: localization files. Use this with Core Civ so names, descriptions, city names, and flavor text are updated together.</li>
                 <li>SQL: SQL-only templates such as moments. Keep SQL changes exact and narrow.</li>
               </ul>
@@ -171,6 +187,12 @@
               Output folder
               <input name="template_output_dir" value="output/template_copilot" autocomplete="off">
               <small class="fieldHelp">Where generated XML, SQL, and ArtDef files are written. Relative paths stay inside the tool folder.</small>
+            </label>
+
+            <label class="uploadLine">
+              Load XML extractor prefill
+              <input id="copilotPrefillInput" type="file" accept=".json,application/json">
+              <small class="fieldHelp">Load `copilot_prefill.json` from `xml_profile_extractor.py` to prefill civs, leaders, linked uniques, city names, citizen names, leader IDs, icons, and LOC key context.</small>
             </label>
 
             <div class="grid three">
@@ -188,6 +210,11 @@
                 Leader count
                 <input id="leaderCount" name="leader_count" type="number" value="1" min="1" max="8" step="1">
                 <small class="fieldHelp">Create up to 8 leaders. Each leader is tied to one civilization before generation.</small>
+              </label>
+              <label class="check apiToggle">
+                <input name="use_api" type="checkbox" checked>
+                Use OpenAI API
+                <small class="fieldHelp">Turn off for deterministic ID-only output using your fields and manual replacements.</small>
               </label>
             </div>
 
@@ -207,27 +234,9 @@
               <div id="leaderEntityGrid" class="entityGrid"></div>
             </section>
 
-            <div class="grid three">
-              <label>
-                Units
-                <textarea name="unit_names" rows="3" placeholder="Elite Guard&#10;Second Unit"></textarea>
-                <small class="fieldHelp">Unit display names. The tool turns them into stable Civ-style identifiers when templates contain matching placeholders.</small>
-              </label>
-              <label>
-                Buildings
-                <textarea name="building_names" rows="3" placeholder="Assembly Hall&#10;Second Building"></textarea>
-                <small class="fieldHelp">Building names for building XML, text, icons, and related replacements.</small>
-              </label>
-              <label>
-                Improvements
-                <textarea name="improvement_names" rows="3" placeholder="Memorial Park&#10;Second Improvement"></textarea>
-                <small class="fieldHelp">Improvement names for improvement gameplay, icons, and localization files.</small>
-              </label>
-              <label>
-                Districts
-                <textarea name="district_names" rows="3" placeholder="Commons District&#10;Harbor Quarter"></textarea>
-                <small class="fieldHelp">District names for unique districts, district modifiers, projects, and localization.</small>
-              </label>
+            <div class="guideBox compactGuide">
+              <strong>Linked uniques</strong>
+              <p>Named geography is part of the core civilization block. Optional governors, units, buildings, improvements, and districts stay behind checkboxes so template selection remains clean.</p>
             </div>
 
             <div class="grid two">
@@ -273,6 +282,8 @@
             <div class="templateFilterBar">
               <button type="button" data-template-filter="core">Core Civ</button>
               <button type="button" data-template-filter="districts">Districts</button>
+              <button type="button" data-template-filter="governors">Governors</button>
+              <button type="button" data-template-filter="named">Named Geography</button>
               <button type="button" data-template-filter="texts">Texts</button>
               <button type="button" data-template-filter="sql">SQL</button>
             </div>
@@ -288,6 +299,54 @@
             <details>
               <summary>Replacement map</summary>
               <pre id="replacementMap">{}</pre>
+            </details>
+          </section>
+        </section>
+      </section>
+
+      <section class="page" id="extractorPage" data-page-panel="extractor">
+        <section class="extractorWorkspace">
+          <form id="extractorForm" class="templatePanel">
+            <div>
+              <h2>XML Profile Extractor</h2>
+              <p>Scan an existing Civ VI mod folder or one XML file, then make a clean JSON profile for later Copilot reuse. This runs locally and does not call OpenAI.</p>
+            </div>
+
+            <label>
+              XML file or folder path
+              <input id="extractorSourcePath" name="extractor_source_path" placeholder="D:\MODFILES\MyMod" autocomplete="off">
+              <small class="fieldHelp">Use a folder to scan recursively, or paste one XML file path. Source files are only read.</small>
+            </label>
+
+            <label>
+              Extracted profile output
+              <input id="extractorProfileOut" name="extractor_profile_out" value="output/xml_extractor/extracted_profile.json" autocomplete="off">
+              <small class="fieldHelp">Where the raw extracted data should be written. If you enter a folder, `extracted_profile.json` is created inside it.</small>
+            </label>
+
+            <label>
+              Copilot prefill output
+              <input id="extractorPrefillOut" name="extractor_prefill_out" value="output/xml_extractor/copilot_prefill.json" autocomplete="off">
+              <small class="fieldHelp">The Template Copilot can load this file to prefill civs, leaders, city names, LOC context, icons, and linked unique names.</small>
+            </label>
+
+            <div class="templateActions">
+              <button type="button" id="extractXmlButton">Extract Profile</button>
+              <button type="button" id="summarizeXmlButton">Summarize</button>
+              <button type="button" id="buildPrefillButton">Build Prefill</button>
+            </div>
+          </form>
+
+          <section class="templatePanel extractorResults">
+            <div>
+              <h2>Detected Data</h2>
+              <p id="extractorStatus">Ready</p>
+            </div>
+            <div id="extractorLinks" class="templateOutputs"></div>
+            <div id="extractorSummary" class="extractorSummary"></div>
+            <details>
+              <summary>Raw summary JSON</summary>
+              <pre id="extractorJson">{}</pre>
             </details>
           </section>
         </section>

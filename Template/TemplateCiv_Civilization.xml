@@ -77,73 +77,53 @@
 	<StartBiasRivers>
 		<Row CivilizationType="CIVILIZATION_TEMPLATE" Tier="2"/>
 	</StartBiasRivers>
+	<NamedRivers>
+		<Row NamedRiverType="NAMED_RIVER_NORTH" Name="LOC_NAMED_RIVER_SWIFT"/>
+		<Row NamedRiverType="NAMED_RIVER_SOUTH" Name="LOC_NAMED_RIVER_CALM"/>
+	</NamedRivers>
 	<NamedRiverCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_GRANDE"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_USUMACINTA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_NAZAS"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_AGUANAVAL"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_BALSAS"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_CULIACAN"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_LERMA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_GRANDE_DE_SANTIAGO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_FUERTE"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_CONCHOS"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_NORTH"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_SOUTH"/>
 	</NamedRiverCivilizations>
 	<NamedLakes>
-		<Row NamedLakeType="NAMED_LAKE_CHAPALA" Name="LOC_NAMED_LAKE_CHAPALA"/>
-		<Row NamedLakeType="NAMED_LAKE_PATZCUARO" Name="LOC_NAMED_LAKE_PATZCUARO"/>
-		<Row NamedLakeType="NAMED_LAKE_BACALAR" Name="LOC_NAMED_LAKE_BACALAR"/>
-		<Row NamedLakeType="NAMED_LAKE_LAGUNA_CATEMACO" Name="LOC_NAMED_LAKE_LAGUNA_CATEMACO"/>
-		<Row NamedLakeType="NAMED_LAKE_EL_CARACOL" Name="LOC_NAMED_LAKE_EL_CARACOL"/>
+		<Row NamedLakeType="NAMED_LAKE_CRYSTAL" Name="LOC_NAMED_LAKE_CRYSTAL"/>
+		<Row NamedLakeType="NAMED_LAKE_SHADOW" Name="LOC_NAMED_LAKE_SHADOW"/>
 	</NamedLakes>
 	<NamedLakeCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_LAKE_TEXCOCO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_CHAPALA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_PATZCUARO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_BACALAR"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_LAGUNA_CATEMACO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_EL_CARACOL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_CRYSTAL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_SHADOW"/>
 	</NamedLakeCivilizations>
 	<NamedSeas>
-		<Row NamedSeaType="NAMED_SEA_GULF_OF_CALIFORNIA" Name="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME"/>
-		<Row NamedSeaType="NAMED_SEA_GULF_OF_MEXICO" Name="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_AZURE" Name="LOC_NAMED_SEA_AZURE"/>
+		<Row NamedSeaType="NAMED_SEA_EMERALD" Name="LOC_NAMED_SEA_EMERALD"/>
 	</NamedSeas>
 	<NamedSeaCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_GULF_OF_CALIFORNIA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_GULF_OF_MEXICO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_AZURE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_EMERALD"/>
 	</NamedSeaCivilizations>
 	<NamedDeserts>
-		<Row NamedDesertType="NAMED_DESERT_SONORAN" Name="LOC_NAMED_DESERT_SONORA"/>
-		<Row NamedDesertType="NAMED_DESERT_LA_GUAJIRA" Name="LOC_NAMED_DESERT_LA_GUAJIRA"/>
-		<Row NamedDesertType="NAMED_DESERT_SECHURA" Name="LOC_NAMED_DESERT_SECHURA"/>
+		<Row NamedDesertType="NAMED_DESERT_GOLDEN" Name="LOC_NAMED_DESERT_GOLDEN"/>
+		<Row NamedDesertType="NAMED_DESERT_SILENT" Name="LOC_NAMED_DESERT_SILENT"/>
 	</NamedDeserts>
 	<NamedDesertCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_SONORAN"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_LA_GUAJIRA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_SECHURA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_GOLDEN"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_SILENT"/>
 	</NamedDesertCivilizations>
 	<NamedVolcanoes>
-		<Row NamedVolcanoType="NAMED_VOLCANO_PICO_DE_ORIZABA" Name="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA"/>
-		<Row NamedVolcanoType="NAMED_VOLCANO_TAJUMULCO" Name="LOC_NAMED_VOLCANO_TAJUMULCO"/>
-		<Row NamedVolcanoType="NAMED_VOLCANO_TACANA" Name="LOC_NAMED_VOLCANO_TACANA"/>
-		<Row NamedVolcanoType="NAMED_VOLCANO_SANTIAGUITO" Name="LOC_NAMED_VOLCANO_SANTIAGUITO"/>
-		<Row NamedVolcanoType="NAMED_VOLCANO_CHAPARRASTIQUE" Name="LOC_NAMED_VOLCANO_CHAPARRASTIQUE"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_ETERNAL" Name="LOC_NAMED_VOLCANO_ETERNAL"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_FIRE" Name="LOC_NAMED_VOLCANO_FIRE"/>
 	</NamedVolcanoes>
 	<NamedVolcanoCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_PICO_DE_ORIZABA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_TAJUMULCO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_TACANA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_SANTIAGUITO"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_CHAPARRASTIQUE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_ETERNAL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_FIRE"/>
 	</NamedVolcanoCivilizations>
+	<NamedMountains>
+		<Row NamedMountainType="NAMED_MOUNTAIN_HIGH" Name="LOC_NAMED_MOUNTAIN_HIGH"/>
+		<Row NamedMountainType="NAMED_MOUNTAIN_RIDGE" Name="LOC_NAMED_MOUNTAIN_RIDGE"/>
+	</NamedMountains>
 	<NamedMountainCivilizations>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_MEXICAN_PLATEAU"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_OCCIDENTAL"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_CHIAPAS"/>
-		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_MONTANAS_GUATEMALA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_HIGH"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_RIDGE"/>
 	</NamedMountainCivilizations>
 
 	<TraitModifiers>

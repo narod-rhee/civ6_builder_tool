@@ -159,50 +159,41 @@
 		<Row Tag="LOC_CITIZEN_DANIEL">
 			<Text>Daniel</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_CHAPALA">
-			<Text>Lake Chapala</Text>
+		<Row Tag="LOC_NAMED_RIVER_SWIFT">
+			<Text>Swift River</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_PATZCUARO">
-			<Text>Lake Patzcuaro</Text>
+		<Row Tag="LOC_NAMED_RIVER_CALM">
+			<Text>Calm River</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_BACALAR">
-			<Text>Lake Bacalar</Text>
+		<Row Tag="LOC_NAMED_LAKE_CRYSTAL">
+			<Text>Crystal Lake</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_LAGUNA_CATEMACO">
-			<Text>Laguna Catemaco</Text>
+		<Row Tag="LOC_NAMED_LAKE_SHADOW">
+			<Text>Shadow Lake</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_LAKE_EL_CARACOL">
-			<Text>El Caracol Lake</Text>
+		<Row Tag="LOC_NAMED_SEA_AZURE">
+			<Text>Azure Sea</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME">
-			<Text>Gulf of California</Text>
+		<Row Tag="LOC_NAMED_SEA_EMERALD">
+			<Text>Emerald Sea</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME">
-			<Text>Gulf of Mexico</Text>
+		<Row Tag="LOC_NAMED_DESERT_GOLDEN">
+			<Text>Golden Desert</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_SONORA">
-			<Text>Sonoran Desert</Text>
+		<Row Tag="LOC_NAMED_DESERT_SILENT">
+			<Text>Silent Desert</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_LA_GUAJIRA">
-			<Text>La Guajira Desert</Text>
+		<Row Tag="LOC_NAMED_VOLCANO_ETERNAL">
+			<Text>Eternal Peak</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_DESERT_SECHURA">
-			<Text>Sechura Desert</Text>
+		<Row Tag="LOC_NAMED_VOLCANO_FIRE">
+			<Text>Fire Peak</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA">
-			<Text>Pico de Orizaba</Text>
+		<Row Tag="LOC_NAMED_MOUNTAIN_HIGH">
+			<Text>High Mountain</Text>
 		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_TAJUMULCO">
-			<Text>Tajumulco Volcano</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_TACANA">
-			<Text>Tacana Volcano</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_SANTIAGUITO">
-			<Text>Santiaguito Volcano</Text>
-		</Row>
-		<Row Tag="LOC_NAMED_VOLCANO_CHAPARRASTIQUE">
-			<Text>Chaparrastique Volcano</Text>
+		<Row Tag="LOC_NAMED_MOUNTAIN_RIDGE">
+			<Text>Ridge Mountain</Text>
 		</Row>
 		<Row Tag="LOC_PROMOTION_TEMPLATE_UNIT_DESCRIPTION">
 			<Text>Promotions available to the template unit class. Each promotion improves combat, movement, or ranged effectiveness.</Text>

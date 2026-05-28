@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Template_Units -->
-<!-- Author: ALLAN -->
-<!-- DateCreated: 5/19/2025 7:43:16 PM -->
+<!-- TemplateCiv_Units -->
 <GameData>
-	<!-- Types for TEMPLATE Units -->
 	<Types>
 		<Row Type="UNIT_TEMPLATE" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_CIVILIAN_TEMPLATE_1" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_CIVILIAN_TEMPLATE_2" Kind="KIND_UNIT"/>
 	</Types>
 
 	<!-- Unit Replacements -->
 	<UnitReplaces>
 		<Row CivUniqueUnitType="UNIT_TEMPLATE" ReplacesUnitType="UNIT_GIANT_DEATH_ROBOT"/>
+		<Row CivUniqueUnitType="UNIT_CIVILIAN_TEMPLATE_1" ReplacesUnitType="UNIT_BUILDER"/>
+		<Row CivUniqueUnitType="UNIT_CIVILIAN_TEMPLATE_2" ReplacesUnitType="UNIT_MILITARY_ENGINEER"/>
 	</UnitReplaces>
 
 	<!-- Unit Definitions -->
@@ -38,16 +39,50 @@
 			 CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES"
 			 CostProgressionParam1="10"
 			 TraitType="TRAIT_CIVILIZATION_UNIT_TEMPLATE"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_1"
+			 Cost="50"
+			 BaseMoves="2"
+			 BaseSightRange="2"
+			 ZoneOfControl="false"
+			 Domain="DOMAIN_LAND"
+			 FormationClass="FORMATION_CLASS_CIVILIAN"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Name="LOC_UNIT_BUILDER_NAME"
+			 Description="LOC_UNIT_BUILDER_DESCRIPTION"
+			 CanCapture="False"
+			 CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES"
+			 CostProgressionParam1="4"
+			 PurchaseYield="YIELD_GOLD"
+			 BuildCharges="3"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_2"
+			 Cost="170"
+			 Maintenance="2"
+			 BaseMoves="2"
+			 BaseSightRange="2"
+			 ZoneOfControl="false"
+			 Domain="DOMAIN_LAND"
+			 FormationClass="FORMATION_CLASS_SUPPORT"
+			 PromotionClass="PROMOTION_CLASS_SUPPORT"
+			 AdvisorType="ADVISOR_CONQUEST"
+			 Name="LOC_UNIT_MILITARY_ENGINEER_NAME"
+			 Description="LOC_UNIT_MILITARY_ENGINEER_DESCRIPTION"
+			 PurchaseYield="YIELD_GOLD"
+			 BuildCharges="2"/>
 	</Units>
 	
 	<Tags>
 		<Row Tag="CLASS_TEMPLATE_LAND" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_BUILDER" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_SUPPORT" Vocabulary="ABILITY_CLASS"/>
 	</Tags>
 
 	<TypeTags>
 		<Row Type="UNIT_TEMPLATE" Tag="CLASS_TEMPLATE_LAND"/>
 		<Row Type="UNIT_TEMPLATE" Tag="CLASS_ANTI_AIR"/>
 		<Row Type="UNIT_TEMPLATE" Tag="CLASS_REVEAL_STEALTH"/>
+		<Row Type="UNIT_CIVILIAN_TEMPLATE_1" Tag="CLASS_LANDCIVILIAN"/>
+		<Row Type="UNIT_CIVILIAN_TEMPLATE_1" Tag="CLASS_BUILDER"/>
+		<Row Type="UNIT_CIVILIAN_TEMPLATE_2" Tag="CLASS_SUPPORT"/>
 		<Row Type="ABILITY_UNIT_AUTO_VETERANCY" Tag="CLASS_TEMPLATE_LAND"/>
 		<Row Type="ABILITY_UNIT_WMD_RESISTANCE" Tag="CLASS_TEMPLATE_LAND"/>
 		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_TEMPLATE_LAND"/>
@@ -67,6 +102,10 @@
 		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_MAJOR_CIV_ONLY"/>
 		<Row UnitType="UNIT_TEMPLATE" AiType="UNITAI_SETTLE"/>
 		<Row UnitType="UNIT_TEMPLATE" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_1" AiType="UNITAI_BUILD"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_1" AiType="UNITTYPE_CIVILIAN"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_2" AiType="UNITTYPE_SIEGE_SUPPORT"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_2" AiType="UNITAI_BUILD"/>
+		<Row UnitType="UNIT_CIVILIAN_TEMPLATE_2" AiType="UNITTYPE_CIVILIAN"/>
 	</UnitAiInfos>
 </GameData>
-
