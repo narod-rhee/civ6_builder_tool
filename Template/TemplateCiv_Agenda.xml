@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template_Agenda -->
+<!-- Author: ALLAN -->
+<!-- DateCreated: 5/19/2025 7:41:51 PM -->
+<GameData>
+	<!-- Types -->
+	<Types>
+		<Row Type="TRAIT_AGENDA_TEMPLATE" Kind="KIND_TRAIT"/>
+	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_AGENDA_TEMPLATE"/>
+	</Traits>
+	<!-- Agendas -->
+	<Agendas>
+		<Row AgendaType="AGENDA_TEMPLATE" Name="LOC_AGENDA_TEMPLATE_NAME" Description="LOC_AGENDA_TEMPLATE_DESCRIPTION"/>
+	</Agendas>
+
+	<!-- Historical Agendas -->
+	<HistoricalAgendas>
+		<Row LeaderType="LEADER_TEMPLATE" AgendaType="AGENDA_TEMPLATE"/>
+	</HistoricalAgendas>
+
+	<!-- Agenda Traits -->
+	<AgendaTraits>
+		<Row AgendaType="AGENDA_TEMPLATE" TraitType="TRAIT_AGENDA_TEMPLATE"/>
+	</AgendaTraits>
+	
+	<AiListTypes>
+		<Row ListType="TEMPLATEInquisitionPreference"/>
+		<Row ListType="TEMPLATEInquisitorPreference"/>
+	</AiListTypes>
+	
+	<AiLists>
+		<Row ListType="TEMPLATEInquisitionPreference" AgendaType="AGENDA_TEMPLATE" System="TriggeredTrees"/>
+		<Row ListType="TEMPLATEInquisitorPreference" AgendaType="AGENDA_TEMPLATE" System="Units"/>
+	</AiLists>
+	
+	<AiFavoredItems>
+		<Row ListType="TEMPLATEInquisitionPreference" Item="TRIGGER_RELIGION_FOUNDED"/>
+		<Row ListType="TEMPLATEInquisitorPreference" Item="UNIT_INQUISITOR" Value="1"/>
+	</AiFavoredItems>
+	
+	
+			<!-- Trait Modifiers -->
+	<TraitModifiers>
+		<Row TraitType="TRAIT_AGENDA_TEMPLATE" ModifierId="AGENDA_TEMPLATE_MODIFIER_SAME_RELIGION"/>
+		<Row TraitType="TRAIT_AGENDA_TEMPLATE" ModifierId="AGENDA_TEMPLATE_MODIFIER_ENCROACHING_RELIGION"/>
+	</TraitModifiers>
+
+	<!-- Modifiers -->
+	<Modifiers>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_SAME_RELIGION" ModifierType="MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER" SubjectRequirementSetId="PLAYER_SAME_RELIGION"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_ENCROACHING_RELIGION" ModifierType="MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER" SubjectRequirementSetId="PLAYER_ENCROACHING_RELIGION"/>
+	</Modifiers>
+
+	<!-- Modifier Arguments -->
+	<ModifierArguments>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_SAME_RELIGION" Name="InitialValue" Value="99"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_SAME_RELIGION" Name="StatementKey" Value="LOC_DIPLO_KUDO_EXIT_LEADER_TEMPLATE_LEADER_ANY"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_SAME_RELIGION" Name="SimpleModifierDescription" Value="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_KUDOS"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_ENCROACHING_RELIGION" Name="InitialValue" Value="-99"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_ENCROACHING_RELIGION" Name="StatementKey" Value="LOC_DIPLO_WARNING_EXIT_LEADER_TEMPLATE_LEADER_ANY"/>
+		<Row ModifierId="AGENDA_TEMPLATE_MODIFIER_ENCROACHING_RELIGION" Name="SimpleModifierDescription" Value="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_WARNING"/>
+	</ModifierArguments>
+
+	<ExclusiveAgendas>
+		<Row AgendaOne="AGENDA_TEMPLATE" AgendaTwo="AGENDA_FUN_LOVING"/>
+	</ExclusiveAgendas>
+	
+</GameData>
+
+

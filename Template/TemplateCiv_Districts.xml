@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LovegelChurch_District_Lovegel -->
+<!-- Author: ALLAN -->
+<!-- DateCreated: 5/20/2025 4:44:10 PM -->
+<GameData>
+	<!-- Types Table: Defining the District -->
+	<Types>
+		<Row Type="DISTRICT_TEMPLATE" Kind="KIND_DISTRICT"/>
+	</Types>
+
+	<!-- DistrictReplaces Table: Defining the District Replacement -->
+	<DistrictReplaces>
+		<Row CivUniqueDistrictType="DISTRICT_TEMPLATE" ReplacesDistrictType="DISTRICT_HOLY_SITE"/>
+	</DistrictReplaces>
+er
+	<!-- Districts Table: Defining the Characteristics of the District -->
+	<Districts>
+		<Row DistrictType="DISTRICT_TEMPLATE"
+			 Name="LOC_DISTRICT_TEMPLATE_NAME"
+			 Description="LOC_DISTRICT_TEMPLATE_DESCRIPTION"
+			 PrereqTech="TECH_ASTROLOGY"
+			 PlunderType="PLUNDER_FAITH"
+			 PlunderAmount="300"
+			 AdvisorType="ADVISOR_RELIGION"
+			 Cost="27"
+			 AllowsHolyCity="true"
+			 CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS"
+			 CostProgressionParam1="10"
+			 Maintenance="0"
+			 RequiresPlacement="true"
+			 RequiresPopulation="false"
+			 Aqueduct="false"
+			 NoAdjacentCity="false"
+			 InternalOnly="false"
+			 ZOC="false"
+			 CaptureRemovesBuildings="true"
+			 CaptureRemovesCityDefenses="true"
+			 MilitaryDomain="NO_DOMAIN"
+			 Appeal="4"
+			 CityStrengthModifier="40"
+			 TraitType="TRAIT_CIVILIZATION_DISTRICT_TEMPLATE"
+			 CitizenSlots="200"
+			 CanAttack="false"
+			 CaptureRemovesDistrict="false"/>
+	</Districts>
+
+	<District_CitizenYieldChanges>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldType="YIELD_FOOD" YieldChange="4"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldType="YIELD_FAITH" YieldChange="3"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldType="YIELD_SCIENCE" YieldChange="3"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldType="YIELD_PRODUCTION" YieldChange="3"/>
+	</District_CitizenYieldChanges>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="NaturalWonder_Faith"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Mountain_Faith1"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Mountain_Faith2"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Mountain_Faith3"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Mountain_Faith4"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Mountain_Faith5"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="Forest_Faith"/>
+		<Row DistrictType="DISTRICT_TEMPLATE" YieldChangeId="District_Faith"/>
+	</District_Adjacencies>
+
+	<DistrictModifiers>
+		<Row>
+			<DistrictType>DISTRICT_TEMPLATE</DistrictType>
+			<ModifierId>TEMPLATE_MASS_PROPHET_POINTS</ModifierId>
+		</Row>
+	</DistrictModifiers>
+
+	<Modifiers>
+		<Row>
+			<ModifierId>TEMPLATE_MASS_PROPHET_POINTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS</ModifierType>
+			<SubjectRequirementSetId>TEMPLATE_MASS_PROPHET_POINTS_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TEMPLATE_MASS_PROPHET_POINTS</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>TEMPLATE_MASS_PROPHET_POINTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>180</Value>
+		</Row>
+	</ModifierArguments>
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>TEMPLATE_MASS_PROPHET_POINTS_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>TEMPLATE_MASS_PROPHET_POINTS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_HAS_TEMPLATE</RequirementId>
+		</Row>
+		<Row>
+			<RequirementSetId>TEMPLATE_MASS_PROPHET_POINTS_REQUIREMENTS</RequirementSetId>
+			<RequirementId>REQUIRES_PLAYER_CAN_EVER_EARN_PROPHET</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_TEMPLATE</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>REQUIRES_PLAYER_HAS_TEMPLATE</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_TEMPLATE</Value>
+		</Row>
+	</RequirementArguments>
+</GameData>

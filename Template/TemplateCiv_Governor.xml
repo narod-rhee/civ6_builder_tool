@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template_Yoon -->
+<!-- Author: ALLAN -->
+<!-- DateCreated: 5/19/2025 7:40:02 PM -->
+<GameData>
+	<Types>
+		<Row Type="GOVERNOR_TEMPLATE" Kind="KIND_GOVERNOR"/>
+		<Row Type="GOVERNOR_PROMOTION_MILITARY_SALARY" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="GOVERNOR_PROMOTION_CAPITAL_RELOCATION" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="GOVERNOR_PROMOTION_EMERGENCY_POWERS" Kind="KIND_GOVERNOR_PROMOTION"/>
+		<Row Type="TRAIT_TEMPLATE_GOVERNOR" Kind="KIND_TRAIT"/>
+	</Types>
+	<Governors>
+		<Row GovernorType="GOVERNOR_TEMPLATE" Image="Governor_Template" Name="LOC_GOVERNOR_TEMPLATE_NAME" Title="LOC_GOVERNOR_TEMPLATE_TITLE" ShortTitle="LOC_GOVERNOR_TEMPLATE_SHORT_TITLE" Description="LOC_GOVERNOR_TEMPLATE_DESCRIPTION" IdentityPressure="30" TransitionStrength="10000" PortraitImage="GovernorNormal_Template" PortraitImageSelected="GovernorSelected_Template" TraitType="TRAIT_TEMPLATE_GOVERNOR"/>
+	</Governors>
+	<GovernorPromotionSets>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_MILITARY_SALARY"/>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE"/>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE"/>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_CAPITAL_RELOCATION"/>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION"/>
+		<Row GovernorType="GOVERNOR_TEMPLATE" GovernorPromotion ="GOVERNOR_PROMOTION_EMERGENCY_POWERS"/>
+	</GovernorPromotionSets>
+	<GovernorPromotions>
+		<!-- Base -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_MILITARY_SALARY"
+			  Name="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_DESCRIPTION"
+			  Level="0" Column="1" BaseAbility="true"/>
+
+		<!-- Tier 1 -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE"
+			  Name="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_DESCRIPTION"
+			  Level="1" Column="0" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE"
+			  Name="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_DESCRIPTION"
+			  Level="1" Column="2" />
+
+		<!-- Tier 2 -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_CAPITAL_RELOCATION"
+			  Name="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_DESCRIPTION"
+			  Level="2" Column="0" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION"
+			  Name="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_DESCRIPTION"
+			  Level="2" Column="2" />
+
+		<!-- Final -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EMERGENCY_POWERS"
+			  Name="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_NAME"
+			  Description="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_DESCRIPTION"
+			  Level="3" Column="1" />
+	</GovernorPromotions>
+	
+	<GovernorPromotionPrereqs>
+		<!-- Tier 1 -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_MILITARY_SALARY"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_MILITARY_SALARY"/>
+
+		<!-- Tier 2 -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_CAPITAL_RELOCATION"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE"/>
+
+		<!-- Final Tier -->
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EMERGENCY_POWERS"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_CAPITAL_RELOCATION"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EMERGENCY_POWERS"
+			  PrereqGovernorPromotion="GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION"/>
+	</GovernorPromotionPrereqs>
+
+	<GovernorPromotionModifiers>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_MILITARY_SALARY</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_UNIT_DISCOUNT</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_MILITARY_SALARY</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_AMENITY_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_GOLD_YIELD</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_INDUSTRIAL_AMENITY_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_PRODUCTION_YIELD</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_FATIGUE_AMENITY_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_CAPITAL_RELOCATION</GovernorPromotionType>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_CAPITAL_RELOCATION</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_FOOD_YIELD</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION</GovernorPromotionType>
+			<ModifierId>MODIFIER_TEMPLATE_DIPLOMATIC_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<GovernorPromotionType>GOVERNOR_PROMOTION_EMERGENCY_POWERS</GovernorPromotionType>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_EMERGENCY_POWERS</ModifierId>
+		</Row>
+	</GovernorPromotionModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_UNIT_DISCOUNT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_UNIT_MAINTENANCE_DISCOUNT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_AMENITY_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_AMENITIES_FROM_GOVERNORS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_GOLD_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_INDUSTRIAL_AMENITY_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_AMENITIES_FROM_GOVERNORS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_PRODUCTION_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_FATIGUE_AMENITY_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_AMENITIES_FROM_GOVERNORS</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_CAPITAL_RELOCATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY</ModifierType>
+			<Permanent>1</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_FOOD_YIELD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_DIPLOMATIC_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_FAVOR_PER_TURN</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_EMERGENCY_POWERS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY</ModifierType>
+			<Permanent>1</Permanent>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_UNIT_DISCOUNT</ModifierId>
+			<Name>Amount</Name>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_AMENITY_PENALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>-5</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_GOLD_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_GOLD_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_INDUSTRIAL_AMENITY_PENALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>-10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_PRODUCTION_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_PRODUCTION_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_FATIGUE_AMENITY_PENALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>-15</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_CAPITAL_RELOCATION</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_RADIO</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_FOOD_YIELD</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_FOOD_YIELD</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_TEMPLATE_DIPLOMATIC_PENALTY</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MODIFIER_UNLOCK_PROJECT_EMERGENCY_POWERS</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_TELECOMMUNICATIONS</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>
+
+

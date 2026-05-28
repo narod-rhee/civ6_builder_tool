@@ -1,0 +1,38 @@
+<GameInfo>
+	<!--Colors -->
+	<Colors>
+	<Row>
+		<Type>COLOR_TEMPLATE_STANDARD_1</Type>
+		<Color>255,255,255,255</Color> 	<!-- in form of RGBA, colors need to have different colors, same one used just for example -->
+		<Type>COLOR_TEMPLATE_STANDARD_2</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_3</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_4</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_5</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_6</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_7</Type>
+		<Color>255,255,255,255</Color>
+		<Type>COLOR_TEMPLATE_STANDARD_8</Type>
+		<Color>255,255,255,255</Color>
+	</Row>
+	</Colors>
+		<PlayerColors>
+		<Row>
+			<Type>LEADER_TEMPLATE</Type>
+			<Usage>Unique</Usage>
+			<PrimaryColor>COLOR_TEMPLATE_STANDARD_1</PrimaryColor>
+			<SecondaryColor>COLOR_TEMPLATE_STANDARD_2</SecondaryColor>
+			<Alt1PrimaryColor>COLOR_TEMPLATE_STANDARD_3</Alt1PrimaryColor>
+			<Alt1SecondaryColor>COLOR_TEMPLATE_STANDARD_4</Alt1SecondaryColor>
+			<Alt2PrimaryColor>COLOR_TEMPLATE_STANDARD_5</Alt2PrimaryColor>
+			<Alt2SecondaryColor>COLOR_TEMPLATE_STANDARD_6</Alt2SecondaryColor>
+			<Alt3PrimaryColor>COLOR_TEMPLATE_STANDARD_7</Alt3PrimaryColor>
+			<Alt3SecondaryColor>COLOR_TEMPLATE_STANDARD_8</Alt3SecondaryColor>
+		</Row>
+	</PlayerColors>
+</GameInfo>
+

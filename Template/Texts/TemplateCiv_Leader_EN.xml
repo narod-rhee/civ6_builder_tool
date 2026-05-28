@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BaseGameText>
+		<Row Tag="LOC_AGENDA_TEMPLATE_LEADER_NAME">
+			<Text>Balanced Growth</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_TEMPLATE_LEADER_DESCRIPTION">
+			<Text>Respects civilizations that maintain stable governance and cultural heritage. Prefers cooperative relationships with neighboring nations.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Greetings. I look forward to developing a productive relationship with your civilization.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>You have chosen conflict. We will defend ourselves with determination.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We have no choice but to defend our interests. War is now inevitable.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_KUDO_EXIT_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Your leadership reflects wisdom and vision. Our nations can benefit from this alliance.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_WARNING_EXIT_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We are concerned about your recent actions. We hope you will reconsider your course.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_KUDOS">
+			<Text>The leader appreciates your commitment to cultural development.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_WARNING">
+			<Text>The leader is concerned about recent changes in your nation's direction.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>The vision of balanced growth has been tested, but our spirit endures.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We welcome your friendship. Together we can achieve great things.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We cannot pursue friendship at this time. Perhaps the future will bring better opportunities.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Let us declare our friendship and support for one another.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We are pleased to count you among our friends and allies.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We must decline this offer of friendship at present.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Your envoys are welcome. We look forward to fruitful dialogue.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We must decline your delegation at this time.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We send our representatives to strengthen our ties.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We reject your accusations. They do not reflect our true nature.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Your actions have disappointed us. We must make our disapproval known.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Welcome to our lands. We are honored by your visit.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We believe there is potential for beneficial cooperation between our civilizations.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We would like to share knowledge and learn from one another.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_GREETING_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Greetings. We hope our interactions are mutually beneficial.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Let us formalize our alliance for mutual benefit.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We accept your terms. Let us begin a new era of peace.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We cannot accept these terms. Perhaps we can negotiate again later.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We are interested in restoring peace. Shall we discuss terms?</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We accept your proposal for open borders.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We cannot open our borders at this time.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We propose opening our borders for mutual economic benefit.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>Your military buildup near our borders is concerning. We seek explanation.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We cannot accept this deal.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_TEMPLATE_LEADER_ANY">
+			<Text>We accept this deal. It benefits us both.</Text>
+		</Row>
+	</BaseGameText>
+
+</GameData>
+

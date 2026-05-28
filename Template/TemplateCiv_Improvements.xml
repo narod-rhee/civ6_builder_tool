@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Kinds>
+		<Row Kind="KIND_IMPROVEMENT"/>
+	</Kinds>
+
+	<Types>
+		<Row Type="IMPROVEMENT_TEMPLATE" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="IMPROVEMENT_TEMPLATE_WALL" Kind="KIND_IMPROVEMENT"/>
+	</Types>
+
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" Name="LOC_IMPROVEMENT_TEMPLATE_NAME" Description="LOC_IMPROVEMENT_TEMPLATE_DESCRIPTION" Icon="ICON_IMPROVEMENT_TEMPLATE" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" PrereqTech="TECH_MINING" Appeal="-1"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" Name="LOC_IMPROVEMENT_TEMPLATE_WALL_NAME" Description="LOC_IMPROVEMENT_TEMPLATE_WALL_DESCRIPTION" Icon="ICON_IMPROVEMENT_TEMPLATE_WALL" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" PrereqTech="TECH_MASONRY" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_TEMPLATE_WALL" BuildInLine="true" BuildOnFrontier="true" DefenseModifier="4" GrantFortification="2"/>
+	</Improvements>
+
+	<Improvement_Adjacencies>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" YieldChangeId="TemplateWall_Gold"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" YieldChangeId="TemplateWall_Culture"/>
+	</Improvement_Adjacencies>
+
+	<Improvement_ValidFeatures>
+		<!-- No feature-specific restrictions for template improvements -->
+	</Improvement_ValidFeatures>
+
+	<Improvement_RequiredFeatures>
+		<!-- No required features for template improvements -->
+	</Improvement_RequiredFeatures>
+
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_DESERT"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_TUNDRA"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_SNOW"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_DESERT_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_GRASS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TerrainType="TERRAIN_SNOW_HILLS"/>
+	</Improvement_ValidTerrains>
+
+	<Improvement_ValidResources>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_COPPER"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_DIAMONDS" MustRemoveFeature="false"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_JADE"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_MERCURY"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_SALT"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_SILVER"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_ALUMINUM"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_COAL"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_IRON"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_NITER" MustRemoveFeature="false"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" ResourceType="RESOURCE_URANIUM" MustRemoveFeature="false"/>
+	</Improvement_ValidResources>
+
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" UnitType="UNIT_BUILDER"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" YieldType="YIELD_GOLD" YieldChange="0"/>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" YieldType="YIELD_CULTURE" YieldChange="0"/>
+	</Improvement_YieldChanges>
+
+	<Improvement_BonusYieldChanges>
+		<Row Id="6" ImprovementType="IMPROVEMENT_MINE" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_APPRENTICESHIP"/>
+		<Row Id="7" ImprovementType="IMPROVEMENT_MINE" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_INDUSTRIALIZATION"/>
+	</Improvement_BonusYieldChanges>
+
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_TEMPLATE_WALL" TourismSource="TOURISMSOURCE_CULTURE" PrereqTech="TECH_FLIGHT" ScalingFactor="100"/>
+	</Improvement_Tourism>
+
+	<Adjacency_YieldChanges>
+		<Row ID="TemplateWall_Gold" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_TEMPLATE_WALL" PrereqTech="TECH_MASONRY"/>
+		<Row ID="TemplateWall_Culture" Description="Placeholder" YieldType="YIELD_CULTURE" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_TEMPLATE_WALL" PrereqTech="TECH_CASTLES"/>
+	</Adjacency_YieldChanges>
+
+	<Modifiers>
+		<!-- No custom Mine/Great Wall modifiers copied -->
+	</Modifiers>
+
+	<ModifierArguments>
+		<!-- No custom Mine/Great Wall modifier arguments copied -->
+	</ModifierArguments>
+
+	<ImprovementModifiers>
+		<!-- No custom Mine/Great Wall improvement modifiers copied -->
+	</ImprovementModifiers>
+
+	<RequirementSets>
+		<!-- No custom Mine/Great Wall requirement sets copied -->
+	</RequirementSets>
+
+	<Requirements>
+		<!-- No custom Mine/Great Wall requirements copied -->
+	</Requirements>
+
+	<RequirementArguments>
+		<!-- No custom Mine/Great Wall requirement arguments copied -->
+	</RequirementArguments>
+
+	<RequirementSetRequirements>
+		<!-- No custom Mine/Great Wall requirement set requirements copied -->
+	</RequirementSetRequirements>
+</GameData>

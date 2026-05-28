@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template_Units -->
+<!-- Author: ALLAN -->
+<!-- DateCreated: 5/19/2025 7:43:16 PM -->
+<GameData>
+	<!-- Types for TEMPLATE Units -->
+	<Types>
+		<Row Type="UNIT_TEMPLATE" Kind="KIND_UNIT"/>
+	</Types>
+
+	<!-- Unit Replacements -->
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_TEMPLATE" ReplacesUnitType="UNIT_GIANT_DEATH_ROBOT"/>
+	</UnitReplaces>
+
+	<!-- Unit Definitions -->
+	<Units>
+		<Row UnitType="UNIT_TEMPLATE"
+			 Name="LOC_UNIT_TEMPLATE_NAME"
+			 Description="LOC_UNIT_TEMPLATE_DESCRIPTION"
+			 ZoneOfControl="true"
+			 FormationClass="FORMATION_CLASS_LAND_COMBAT"
+			 PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"
+			 Maintenance="3"
+			 PurchaseYield="YIELD_FAITH"
+			 Cost="300"
+			 BaseMoves="5"
+			 BaseSightRange="3"
+			 Combat="40"
+			 RangedCombat="39"
+			 AntiAirCombat="40"
+			 Range="3"
+			 Domain="DOMAIN_LAND"
+			 FoundCity="true"
+			 CanTargetAir="true"
+			 Stackable="true"
+			 PrereqTech="TECH_ASTROLOGY"
+			 CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES"
+			 CostProgressionParam1="10"
+			 TraitType="TRAIT_CIVILIZATION_UNIT_TEMPLATE"/>
+	</Units>
+	
+	<Tags>
+		<Row Tag="CLASS_TEMPLATE_LAND" Vocabulary="ABILITY_CLASS"/>
+	</Tags>
+
+	<TypeTags>
+		<Row Type="UNIT_TEMPLATE" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="UNIT_TEMPLATE" Tag="CLASS_ANTI_AIR"/>
+		<Row Type="UNIT_TEMPLATE" Tag="CLASS_REVEAL_STEALTH"/>
+		<Row Type="ABILITY_UNIT_AUTO_VETERANCY" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_UNIT_WMD_RESISTANCE" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_UNOBSTRUCTED_VIEW" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_UNOBSTRUCTED_VIEW" Tag="CLASS_TEMPLATE_AIR"/>
+		<Row Type="ABILITY_IGNORE_CROSSING_RIVERS_COST"	Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_UNIT_FIGHT_WHILE_EMBARKED" Tag="CLASS_TEMPLATE_LAND"/>
+		<Row Type="ABILITY_IGNORE_TERRAIN_COST"	Tag="CLASS_TEMPLATE_LAND"/>
+	</TypeTags>
+
+	<UnitAiInfos>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_RANGED"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_SIEGE_ALL"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITTYPE_MAJOR_CIV_ONLY"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITAI_SETTLE"/>
+		<Row UnitType="UNIT_TEMPLATE" AiType="UNITAI_EXPLORE"/>
+	</UnitAiInfos>
+</GameData>
+

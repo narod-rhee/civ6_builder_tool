@@ -1,0 +1,21 @@
+{
+  "source": "input/anya.png",
+  "output_dir": "output/anya_icons",
+  "base_name": "ICON_ANYA",
+  "profile": "civ6_icons_common",
+  "sizes": [256, 200, 128, 80, 64, 50, 48, 45, 44, 36, 32, 30, 24, 22],
+  "shape": "square",
+  "padding_percent": 8,
+  "trim_transparency": true,
+  "make_transparent": false,
+  "background_remove": {
+    "enabled": false,
+    "sample": "corners",
+    "tolerance": 30
+  },
+  "silhouette": {
+    "enabled": false,
+    "color": [255, 255, 255, 255]
+  },
+  "overwrite": true
+}

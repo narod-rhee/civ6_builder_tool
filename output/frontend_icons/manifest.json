@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "source": "D:\\MODFILES\\Tools\\frontend_runs\\uploads\\1779435323146_BUILDING_SHIN_BET.png",
+  "profile": "building_icons",
+  "mode": "building_icons",
+  "shape": "square",
+  "generated_files": [
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_32.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_38.png",
+      "width": 38,
+      "height": 38
+    },
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_50.png",
+      "width": 50,
+      "height": 50
+    },
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_80.png",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_128.png",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "D:\\MODFILES\\Tools\\output\\frontend_icons\\ICON_BUILDING_SHIN_BET_256.png",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "warnings": [
+    "Visible content touches the final canvas edge for 32x32.",
+    "Visible content touches the final canvas edge for 38x38."
+  ]
+}

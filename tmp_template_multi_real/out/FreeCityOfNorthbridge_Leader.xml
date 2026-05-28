@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Types>
+		<Row Type="LEADER_JOHN_SMITH" Kind="KIND_LEADER" />
+		<Row Type="TRAIT_LEADER_JOHN_SMITH_ABILITY" Kind="KIND_TRAIT" />
+		<Row Type="ABILITY_JOHN_SMITH_RELIGIOUS_UNITS" Kind="KIND_ABILITY" />
+		<Row Type="LEADER_JANE_DOE" Kind="KIND_LEADER" />
+		<Row Type="TRAIT_LEADER_JANE_DOE_ABILITY" Kind="KIND_TRAIT" />
+		<Row Type="ABILITY_JANE_DOE_RELIGIOUS_UNITS" Kind="KIND_ABILITY" />
+	</Types>
+	<Leaders>
+		<Row LeaderType="LEADER_JOHN_SMITH" Name="LOC_LEADER_JOHN_SMITH_NAME" InheritFrom="LEADER_DEFAULT" Sex="Female" />
+		<Row LeaderType="LEADER_JANE_DOE" Name="LOC_LEADER_JANE_DOE_NAME" InheritFrom="LEADER_DEFAULT" Sex="Female" />
+	</Leaders>
+	<LeaderQuotes>
+		<Row LeaderType="LEADER_JOHN_SMITH" Quote="LOC_LEADER_JOHN_SMITH_QUOTE" />
+		<Row LeaderType="LEADER_JANE_DOE" Quote="LOC_LEADER_JANE_DOE_QUOTE" />
+	</LeaderQuotes>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_JOHN_SMITH" TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" />
+		<Row LeaderType="LEADER_JOHN_SMITH" TraitType="TRAIT_LEADER_EXPANSIONIST" />
+		<Row LeaderType="LEADER_JOHN_SMITH" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" />
+		<Row LeaderType="LEADER_JANE_DOE" TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" />
+		<Row LeaderType="LEADER_JANE_DOE" TraitType="TRAIT_LEADER_EXPANSIONIST" />
+		<Row LeaderType="LEADER_JANE_DOE" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV" />
+	</LeaderTraits>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" Name="LOC_TRAIT_JOHN_SMITH_ABILITY_NAME" Description="LOC_TRAIT_JOHN_SMITH_ABILITY_DESCRIPTION" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" Name="LOC_TRAIT_JANE_DOE_ABILITY_NAME" Description="LOC_TRAIT_JANE_DOE_ABILITY_DESCRIPTION" />
+	</Traits>
+	<LoadingInfo>
+		<Row LeaderType="LEADER_JOHN_SMITH" ForegroundImage="LEADER_JOHN_SMITH_NEUTRAL" BackgroundImage="LEADER_JOHN_SMITH_BACKGROUND" PlayDawnOfManAudio="1" LeaderText="LOC_LOADING_INFO_LEADER_JOHN_SMITH" />
+		<Row LeaderType="LEADER_JANE_DOE" ForegroundImage="LEADER_JANE_DOE_NEUTRAL" BackgroundImage="LEADER_JANE_DOE_BACKGROUND" PlayDawnOfManAudio="1" LeaderText="LOC_LOADING_INFO_LEADER_JANE_DOE" />
+	</LoadingInfo>
+	<DiplomacyInfo>
+		<Row Type="LEADER_JOHN_SMITH" BackgroundImage="LEADER_JOHN_SMITH_BACKGROUND" />
+		<Row Type="LEADER_JANE_DOE" BackgroundImage="LEADER_JANE_DOE_BACKGROUND" />
+	</DiplomacyInfo>
+	<TraitModifiers>
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_POPULATION_FAITH" />
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_FAITH_CULTURE" />
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_FAITH_SCIENCE" />
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_FAITH_GOLD" />
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_INSPIRATION" />
+		<Row TraitType="TRAIT_LEADER_JOHN_SMITH_ABILITY" ModifierId="JOHN_SMITH_EUREKA" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_POPULATION_FAITH" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_FAITH_CULTURE" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_FAITH_SCIENCE" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_FAITH_GOLD" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_INSPIRATION" />
+		<Row TraitType="TRAIT_LEADER_JANE_DOE_ABILITY" ModifierId="JANE_DOE_EUREKA" />
+	</TraitModifiers>
+	<Modifiers>
+		<Row ModifierId="JOHN_SMITH_POPULATION_FAITH" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION" />
+		<Row ModifierId="JOHN_SMITH_FAITH_CULTURE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JOHN_SMITH_FAITH_SCIENCE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JOHN_SMITH_FAITH_GOLD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JOHN_SMITH_INSPIRATION" ModifierType="MODIFIER_PLAYER_ADJUST_CIVIC_BOOST" />
+		<Row ModifierId="JOHN_SMITH_EUREKA" ModifierType="MODIFIER_PLAYER_ADJUST_TECHNOLOGY_BOOST" />
+		<Row ModifierId="JANE_DOE_POPULATION_FAITH" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION" />
+		<Row ModifierId="JANE_DOE_FAITH_CULTURE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JANE_DOE_FAITH_SCIENCE" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JANE_DOE_FAITH_GOLD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_YIELD_MODIFIER_FROM_FAITH" />
+		<Row ModifierId="JANE_DOE_INSPIRATION" ModifierType="MODIFIER_PLAYER_ADJUST_CIVIC_BOOST" />
+		<Row ModifierId="JANE_DOE_EUREKA" ModifierType="MODIFIER_PLAYER_ADJUST_TECHNOLOGY_BOOST" />
+	</Modifiers>
+	<ModifierArguments>
+		<Row ModifierId="JOHN_SMITH_POPULATION_FAITH" Name="YieldType" Value="YIELD_FAITH" />
+		<Row ModifierId="JOHN_SMITH_POPULATION_FAITH" Name="Amount" Value="5" />
+		<Row ModifierId="JOHN_SMITH_FAITH_CULTURE" Name="YieldType" Value="YIELD_CULTURE" />
+		<Row ModifierId="JOHN_SMITH_FAITH_CULTURE" Name="Amount" Value="100" />
+		<Row ModifierId="JOHN_SMITH_FAITH_SCIENCE" Name="YieldType" Value="YIELD_SCIENCE" />
+		<Row ModifierId="JOHN_SMITH_FAITH_SCIENCE" Name="Amount" Value="100" />
+		<Row ModifierId="JOHN_SMITH_FAITH_GOLD" Name="YieldType" Value="YIELD_GOLD" />
+		<Row ModifierId="JOHN_SMITH_FAITH_GOLD" Name="Amount" Value="100" />
+		<Row ModifierId="JOHN_SMITH_INSPIRATION" Name="Amount" Value="100" />
+		<Row ModifierId="JOHN_SMITH_EUREKA" Name="Amount" Value="100" />
+		<Row ModifierId="JANE_DOE_POPULATION_FAITH" Name="YieldType" Value="YIELD_FAITH" />
+		<Row ModifierId="JANE_DOE_POPULATION_FAITH" Name="Amount" Value="5" />
+		<Row ModifierId="JANE_DOE_FAITH_CULTURE" Name="YieldType" Value="YIELD_CULTURE" />
+		<Row ModifierId="JANE_DOE_FAITH_CULTURE" Name="Amount" Value="100" />
+		<Row ModifierId="JANE_DOE_FAITH_SCIENCE" Name="YieldType" Value="YIELD_SCIENCE" />
+		<Row ModifierId="JANE_DOE_FAITH_SCIENCE" Name="Amount" Value="100" />
+		<Row ModifierId="JANE_DOE_FAITH_GOLD" Name="YieldType" Value="YIELD_GOLD" />
+		<Row ModifierId="JANE_DOE_FAITH_GOLD" Name="Amount" Value="100" />
+		<Row ModifierId="JANE_DOE_INSPIRATION" Name="Amount" Value="100" />
+		<Row ModifierId="JANE_DOE_EUREKA" Name="Amount" Value="100" />
+	</ModifierArguments>
+	<FavoredReligions>
+		<Row LeaderType="LEADER_JOHN_SMITH" ReligionType="RELIGION_HINDUISM" />
+		<Row LeaderType="LEADER_JANE_DOE" ReligionType="RELIGION_HINDUISM" />
+	</FavoredReligions>
+</GameData>

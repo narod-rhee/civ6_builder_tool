@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_NAME" Language="ko_KR">
+			<Text>템플릿</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>문화 발전과 전략적 성장을 소중히 여기는 전진적 문명입니다.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_ADJECTIVE" Language="ko_KR">
+			<Text>템플릿</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TEMPLATE_LEADER_NAME" Language="ko_KR">
+			<Text>템플릿 지도자</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TEMPLATE_LEADER_QUOTE" Language="ko_KR">
+			<Text>"진보는 단결, 비전, 그리고 우리 국민의 헌신을 통해 이루어집니다."</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_TEMPLATE_LEADER" Language="ko_KR">
+			<Text>자신의 문명을 번영으로 이끄는 야심찬 비전가인 지도자입니다. 전략적 계획과 문화 발전을 통해 국민들을 공동의 목표 달성을 위해 단결시킵니다. 지도자의 리더십은 균형 잡힌 성장, 기술 혁신, 이웃 국가와의 협력을 강조합니다.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_TEMPLATE_LEADER_ABILITY_NAME" Language="ko_KR">
+			<Text>전략적 비전</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_TEMPLATE_LEADER_ABILITY_DESCRIPTION" Language="ko_KR">
+			<Text>도시는 충성도 +2와 경이로운 건설에 대한 생산량 +15%를 얻습니다. 모든 유닛은 전투력 +5를 얻습니다. 전략적 자원이 공개되고 개선되었을 때 추가 수익률 +2를 제공합니다.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_TEMPLATE_NAME" Language="ko_KR">
+			<Text>문화 유산</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>시민들은 인구당 신앙, 문화, 금의 보너스 수익률을 얻습니다. 천문학 기술로 시작합니다. 고유 지구는 신앙 인접 보너스 +2와 상당한 주택 및 편의시설을 제공합니다.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_NAME" Language="ko_KR">
+			<Text>건축 우수성</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>고유 건물은 증가된 수익률과 주택을 제공합니다. 건물은 더 빠르게 지을 수 있으며 도시에 보너스 편의시설을 제공합니다.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_TEMPLATE_HOLY_SITE_NAME" Language="ko_KR">
+			<Text>성역 지구</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_TEMPLATE_HOLY_SITE_DESCRIPTION" Language="ko_KR">
+			<Text>성역을 대체합니다. 배정된 인구를 기반으로 신앙, 과학, 생산, 식량을 생성합니다. 첫 건설 시 무료 위대한 예언자가 나타납니다.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TEMPLATE_NAME" Language="ko_KR">
+			<Text>정예 경비대</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>근접 공격 능력을 가진 강력한 원거리 유닛입니다. 같은 시대의 유사 유닛보다 강하며 전략적 자원 연구를 통해 특별한 진급을 잠금 해제합니다. 신앙으로 구매됩니다.</Text>
+		</Row>
+		<Row Tag="LOC_BELIEF_TEMPLATE_NAME" Language="ko_KR">
+			<Text>공동의 목적</Text>
+		</Row>
+		<Row Tag="LOC_BELIEF_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>시민들은 이 신앙이 널리 퍼져 있는 도시에서 보너스 수익률을 얻습니다.</Text>
+		</Row>
+		<Row Tag="LOC_RELIGION_TEMPLATE_NAME" Language="ko_KR">
+			<Text>템플릿 신앙</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_1" Language="ko_KR">
+			<Text>안식처</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_2" Language="ko_KR">
+			<Text>초원</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_3" Language="ko_KR">
+			<Text>숲</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_4" Language="ko_KR">
+			<Text>계곡</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_5" Language="ko_KR">
+			<Text>봉우리</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_6" Language="ko_KR">
+			<Text>항구</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_7" Language="ko_KR">
+			<Text>탑</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_8" Language="ko_KR">
+			<Text>다리</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_9" Language="ko_KR">
+			<Text>계곡</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_10" Language="ko_KR">
+			<Text>손길</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_11" Language="ko_KR">
+			<Text>포인트</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_12" Language="ko_KR">
+			<Text>돌</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_13" Language="ko_KR">
+			<Text>교차로</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_14" Language="ko_KR">
+			<Text>작은 언덕</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_15" Language="ko_KR">
+			<Text>휴식</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_16" Language="ko_KR">
+			<Text>골짜기</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_17" Language="ko_KR">
+			<Text>시냇물</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_18" Language="ko_KR">
+			<Text>상승</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_19" Language="ko_KR">
+			<Text>샤이어</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_20" Language="ko_KR">
+			<Text>해변</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_21" Language="ko_KR">
+			<Text>봉우리</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_22" Language="ko_KR">
+			<Text>해안</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_23" Language="ko_KR">
+			<Text>절벽</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_24" Language="ko_KR">
+			<Text>들판</Text>
+		</Row>
+        
+		<Row Tag="LOC_CITIZEN_JOHN" Language="ko_KR">
+			<Text>존</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_MICHAEL" Language="ko_KR">
+			<Text>마이클</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_DAVID" Language="ko_KR">
+			<Text>데이비드</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_ROBERT" Language="ko_KR">
+			<Text>로버트</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_JAMES" Language="ko_KR">
+			<Text>제임스</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_EMILY" Language="ko_KR">
+			<Text>에밀리</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_WILLIAM" Language="ko_KR">
+			<Text>윌리엄</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_SARAH" Language="ko_KR">
+			<Text>사라</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_CHRISTOPHER" Language="ko_KR">
+			<Text>크리스토퍼</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_DANIEL" Language="ko_KR">
+			<Text>다니엘</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_CHAPALA" Language="ko_KR">
+			<Text>차팔라 호수</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_PATZCUARO" Language="ko_KR">
+			<Text>파츠쿠아로 호수</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_BACALAR" Language="ko_KR">
+			<Text>바칼라르 호수</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_LAGUNA_CATEMACO" Language="ko_KR">
+			<Text>카테마코 호수</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_EL_CARACOL" Language="ko_KR">
+			<Text>엘 카라콜 호수</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME" Language="ko_KR">
+			<Text>캘리포니아만</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME" Language="ko_KR">
+			<Text>멕시코만</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_SONORA" Language="ko_KR">
+			<Text>소노라 사막</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_LA_GUAJIRA" Language="ko_KR">
+			<Text>라과히라 사막</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_SECHURA" Language="ko_KR">
+			<Text>세추라 사막</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA" Language="ko_KR">
+			<Text>피코 데 오리사바</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_TAJUMULCO" Language="ko_KR">
+			<Text>타후물코 화산</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_TACANA" Language="ko_KR">
+			<Text>타카나 화산</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_SANTIAGUITO" Language="ko_KR">
+			<Text>산티아기토 화산</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_CHAPARRASTIQUE" Language="ko_KR">
+			<Text>차파라스티케 화산</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_UNIT_DESCRIPTION" Language="ko_KR">
+			<Text>템플릿 유닛 클래스에 사용 가능한 진급입니다. 각 진급은 전투, 이동 또는 원거리 효과를 향상시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_ADVANCE_NAME" Language="ko_KR">
+			<Text>신속한 전개</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_ADVANCE_DESCRIPTION" Language="ko_KR">
+			<Text>향상된 이동성을 부여하고 지구에 의한 원거리 페널티를 무시할 수 있게 합니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME" Language="ko_KR">
+			<Text>전술적 타격 I</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 10 증가시키고 이동을 1 증가시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME" Language="ko_KR">
+			<Text>전술적 타격 II</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 20 증가시키고 이동을 1 증가시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME" Language="ko_KR">
+			<Text>전술적 타격 III</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 20, 이동을 1, 대공 능력을 증가시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_I_NAME" Language="ko_KR">
+			<Text>기동전술 I</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_I_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 10 증가시키고 이동을 1 증가시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_II_NAME" Language="ko_KR">
+			<Text>기동전술 II</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_II_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 20 증가시키고 이동을 1 증가시킵니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_III_NAME" Language="ko_KR">
+			<Text>기동전술 III</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_III_DESCRIPTION" Language="ko_KR">
+			<Text>이 유닛의 전투력을 20, 이동을 2 증가시킵니다.</Text>
+		</Row>
+	</LocalizedText>
+</GameData>
+

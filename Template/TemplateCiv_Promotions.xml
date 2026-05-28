@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Template_Promotions -->
+<!-- Author: ALLAN -->
+<!-- DateCreated: 5/19/2025 7:40:28 PM -->
+<GameData>
+	<Types>
+		<Row Type="PROMOTION_CLASS_TEMPLATE_UNIT" Kind="KIND_PROMOTION_CLASS"/>
+		<Row Type="PROMOTION_TEMPLATE_ADVANCE" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_OFFENSIVE_I" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_OFFENSIVE_II" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_OFFENSIVE_III" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_MOBILITY_I" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_MOBILITY_II" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_TEMPLATE_MOBILITY_III" Kind="KIND_PROMOTION"/>
+	</Types>
+	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_TEMPLATE_UNIT" Name="LOC_PROMOTION_TEMPLATE_UNIT_NAME"/>
+	</UnitPromotionClasses>
+
+	<UnitPromotions>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_ADVANCE" Name="LOC_PROMOTION_TEMPLATE_ADVANCE_NAME" Description="LOC_PROMOTION_TEMPLATE_ADVANCE_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_OFFENSIVE_I" Name="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME" Description="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_OFFENSIVE_II" Name="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME" Description="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_OFFENSIVE_III" Name="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME" Description="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_MOBILITY_I" Name="LOC_PROMOTION_TEMPLATE_MOBILITY_I_NAME" Description="LOC_PROMOTION_TEMPLATE_MOBILITY_I_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_MOBILITY_II" Name="LOC_PROMOTION_TEMPLATE_MOBILITY_II_NAME" Description="LOC_PROMOTION_TEMPLATE_MOBILITY_II_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+		<Row UnitPromotionType="PROMOTION_TEMPLATE_MOBILITY_III" Name="LOC_PROMOTION_TEMPLATE_MOBILITY_III_NAME" Description="LOC_PROMOTION_TEMPLATE_MOBILITY_III_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_TEMPLATE_UNIT"/>
+	</UnitPromotions>
+	<UnitPromotionModifiers>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_ADVANCE</UnitPromotionType>
+			<ModifierId>OFFENSIVE_IGNORE_RANGED_PENALTY</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_ADVANCE</UnitPromotionType>
+			<ModifierId>OFFENSIVE_JUMP_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_I</UnitPromotionType>
+			<ModifierId>OFFENSIVE_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_I</UnitPromotionType>
+			<ModifierId>OFFENSIVE_MOVEMENT_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_I</UnitPromotionType>
+			<ModifierId>OFFENSIVE_ANTIAIR_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_II</UnitPromotionType>
+			<ModifierId>OFFENSIVE_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_II</UnitPromotionType>
+			<ModifierId>OFFENSIVE_MOVEMENT_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_II</UnitPromotionType>
+			<ModifierId>OFFENSIVE_ANTIAIR_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_III</UnitPromotionType>
+			<ModifierId>OFFENSIVE_III</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_III</UnitPromotionType>
+			<ModifierId>OFFENSIVE_MOVEMENT_III</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_OFFENSIVE_III</UnitPromotionType>
+			<ModifierId>OFFENSIVE_ANTIAIR_III</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_I</UnitPromotionType>
+			<ModifierId>MOBILITY_COMBAT_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_I</UnitPromotionType>
+			<ModifierId>MOBILITY_MOVEMENT_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_I</UnitPromotionType>
+			<ModifierId>MOBILITY_ANTIAIR_I</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_II</UnitPromotionType>
+			<ModifierId>MOBILITY_COMBAT_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_II</UnitPromotionType>
+			<ModifierId>MOBILITY_MOVEMENT_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_II</UnitPromotionType>
+			<ModifierId>MOBILITY_ANTIAIR_II</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_III</UnitPromotionType>
+			<ModifierId>MOBILITY_COMBAT_III</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_III</UnitPromotionType>
+			<ModifierId>MOBILITY_MOVEMENT_III</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_TEMPLATE_MOBILITY_III</UnitPromotionType>
+			<ModifierId>MOBILITY_ANTIAIR_III</ModifierId>
+		</Row>
+	</UnitPromotionModifiers>
+
+	<Modifiers>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_I</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_I</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_I</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_ANTI_AIR_STRENGTH_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_II</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_II</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_II</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_ANTI_AIR_STRENGTH_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_III</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_III</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_III</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_ANTI_AIR_STRENGTH_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_I</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_I</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_II</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_II</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_III</ModifierId>
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_III</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_JUMP_I</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_JUMP_DISTANCE</ModifierType>
+		</Row>
+
+		<Row>
+			<ModifierId>OFFENSIVE_IGNORE_RANGED_PENALTY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_IGNORE_RANGED_VS_DISTRICT_PENALTY</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>OFFENSIVE_I</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_I</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_I</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_II</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_II</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_II</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_III</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_MOVEMENT_III</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>OFFENSIVE_ANTIAIR_III</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_I</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_I</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_II</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_II</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_COMBAT_III</ModifierId>
+			<Name>Amount</Name>
+			<Value>20</Value>
+		</Row>
+		<Row>
+			<ModifierId>MOBILITY_MOVEMENT_III</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>OFFENSIVE_JUMP_I</ModifierId>
+			<Name>Range</Name>
+			<Value>5</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>OFFENSIVE_IGNORE_RANGED_PENALTY</ModifierId>
+			<Name>Ignore</Name>
+			<Value>true</Value>
+		</Row>
+	</ModifierArguments>
+	<ModifierStrings>
+		<Row ModifierId="OFFENSIVE_I" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME}"/>
+		<Row ModifierId="OFFENSIVE_MOVEMENT_I" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME}"/>
+		<Row ModifierId="OFFENSIVE_ANTIAIR_I" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME}"/>
+		<Row ModifierId="OFFENSIVE_II" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME}"/>
+		<Row ModifierId="OFFENSIVE_MOVEMENT_II" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME}"/>
+		<Row ModifierId="OFFENSIVE_ANTIAIR_II" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME}"/>
+		<Row ModifierId="OFFENSIVE_III" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME}"/>
+		<Row ModifierId="OFFENSIVE_MOVEMENT_III" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME}"/>
+		<Row ModifierId="OFFENSIVE_ANTIAIR_III" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME}"/>
+		<Row ModifierId="MOBILITY_COMBAT_I" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_I_NAME}"/>
+		<Row ModifierId="MOBILITY_MOVEMENT_I" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_I_NAME}"/>
+		<Row ModifierId="MOBILITY_COMBAT_II" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_II_NAME}"/>
+		<Row ModifierId="MOBILITY_MOVEMENT_II" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_II_NAME}"/>
+		<Row ModifierId="MOBILITY_COMBAT_III" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_III_NAME}"/>
+		<Row ModifierId="MOBILITY_MOVEMENT_III" Context="Preview" Text="+{1_Amount} {LOC_PROMOTION_TEMPLATE_MOBILITY_III_NAME}"/>
+	</ModifierStrings>
+</GameData>
+
+

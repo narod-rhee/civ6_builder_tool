@@ -1,0 +1,26 @@
+{
+  "source": "input/leader.png",
+  "output_dir": "output/leader_icons",
+  "base_name": "ICON_LEADER_TEST",
+  "mode": "leader_circle",
+  "sizes": [256, 200, 128, 80, 64, 50, 48, 45, 44, 36, 32, 30, 24, 22],
+  "background_remove": {
+    "enabled": true,
+    "sample": "corners",
+    "tolerance": 35,
+    "feather": 2,
+    "despill": true
+  },
+  "circle": {
+    "enabled": true,
+    "crop_to_circle": true,
+    "background": {
+      "enabled": true,
+      "color": [18, 18, 18, 255]
+    }
+  },
+  "subject_scale_percent": 108,
+  "vertical_offset_percent": -2,
+  "horizontal_offset_percent": 0,
+  "overwrite": true
+}

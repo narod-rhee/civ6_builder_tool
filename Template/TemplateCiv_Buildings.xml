@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+
+<Types>
+		<Row Type="BUILDING_TEMPLATE" Kind="KIND_BUILDING"/>
+</Types>
+
+ <Buildings>
+    <Row BuildingType="BUILDING_TEMPLATE" Name="LOC_BUILDING_TEMPLATE_NAME" Description="LOC_BUILDING_TEMPLATE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="70" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="1" CitizenSlots="1"/>
+</Buildings>
+
+<Building_YieldChanges>
+    <Row BuildingType="BUILDING_TEMPLATE" YieldType="YIELD_FAITH" YieldChange="2"/>
+</Building_YieldChanges>
+
+<!-- Additional Building Tables for Template -->
+
+<BuildingPrereqs>
+    <!-- INSERT BUILDING PREREQS HERE -->
+</BuildingPrereqs>
+
+<MutuallyExclusiveBuildings>
+    <!-- INSERT MUTUALLY EXCLUSIVE BUILDINGS HERE -->
+</MutuallyExclusiveBuildings>
+
+<Building_ValidFeatures>
+    <!-- INSERT VALID FEATURES HERE -->
+</Building_ValidFeatures>
+
+<Building_RequiredFeatures>
+    <!-- INSERT REQUIRED FEATURES HERE -->
+</Building_RequiredFeatures>
+
+<Building_ValidTerrains>
+    <!-- INSERT VALID TERRAINS HERE -->
+</Building_ValidTerrains>
+
+<Building_YieldsPerEra>
+    <!-- INSERT YIELDS PER ERA HERE -->
+</Building_YieldsPerEra>
+
+<Building_GreatPersonPoints>
+    <!-- INSERT GREAT PERSON POINTS HERE -->
+</Building_GreatPersonPoints>
+
+<Building_YieldDistrictCopies>
+    <!-- INSERT YIELD DISTRICT COPIES HERE -->
+</Building_YieldDistrictCopies>
+
+<Building_GreatWorks>
+    <!-- INSERT GREAT WORKS HERE -->
+</Building_GreatWorks>
+
+<Modifiers>
+    <!-- INSERT MODIFIERS HERE -->
+</Modifiers>
+
+<ModifierArguments>
+    <!-- INSERT MODIFIER ARGUMENTS HERE -->
+</ModifierArguments>
+
+<BuildingModifiers>
+    <!-- INSERT BUILDING MODIFIERS HERE -->
+</BuildingModifiers>
+
+<Requirements>
+    <!-- INSERT REQUIREMENTS HERE -->
+</Requirements>
+
+<RequirementArguments>
+    <!-- INSERT REQUIREMENT ARGUMENTS HERE -->
+</RequirementArguments>
+
+<RequirementSets>
+    <!-- INSERT REQUIREMENT SETS HERE -->
+</RequirementSets>
+
+<RequirementSetRequirements>
+    <!-- INSERT REQUIREMENT SET REQUIREMENTS HERE -->
+</RequirementSetRequirements>
+
+</GameData>

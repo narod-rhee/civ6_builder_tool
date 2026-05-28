@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<LocalizedText>
+		<!-- Diplomatic Dialogs -->
+		<Row Tag="LOC_AGENDA_TEMPLATE_LEADER_NAME" Language="ko_KR">
+			<Text>균형 잡힌 성장</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_TEMPLATE_LEADER_DESCRIPTION" Language="ko_KR">
+			<Text>안정적인 통치와 문화 유산을 유지하는 문명을 존중합니다. 이웃 국가와의 협력을 선호합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>안녕하세요. 귀 문명과 건설적인 관계를 발전시키기를 기대합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>당신은 갈등을 선택했습니다. 우리는 결연히 방어할 것입니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 우리의 이익을 지키기 위해 어쩔 수 없이 나섭니다. 이제 전쟁은 피할 수 없습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_KUDO_EXIT_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>당신의 지도력은 지혜와 비전을 보여줍니다. 우리 국가들은 이 동맹으로 이익을 얻을 수 있습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_WARNING_EXIT_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 당신의 최근 행보에 우려를 표합니다. 당신이 행동을 재고하기를 바랍니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_KUDOS" Language="ko_KR">
+			<Text>지도자는 당신의 문화 발전에 대한 헌신을 높이 평가합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_TEMPLATE_LEADER_CULTURE_WARNING" Language="ko_KR">
+			<Text>지도자는 당신 나라의 최근 방향 변화에 대해 우려하고 있습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>균형 잡힌 성장의 비전이 시험받았지만, 우리의 정신은 영속할 것입니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 당신의 우정을 환영합니다. 함께 우리는 위대한 일을 이룰 수 있습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>지금은 우정을 추구할 수 없습니다. 미래에 더 나은 기회가 오기를 바랍니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>서로의 우정과 지지를 선언합시다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>당신을 우리 친구이자 동맹으로 맞이하게 되어 기쁩니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>현재로서는 이 우정 제안을 거절해야 합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>당신의 사절단을 환영합니다. 우리는 생산적인 대화를 기대합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>이번에는 당신의 사절단을 받아들일 수 없습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 관계 강화를 위해 대표단을 보냅니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 당신의 비난을 거부합니다. 그것은 우리의 진정한 본성을 반영하지 않습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>당신의 행동은 우리를 실망시켰습니다. 우리는 우리의 불만을 알려야 합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리 영토에 오신 것을 환영합니다. 당신의 방문을 영광으로 생각합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 우리 문명 간에 유익한 협력의 가능성이 있다고 믿습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 지식을 공유하고 서로 배우고 싶습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_GREETING_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>안녕하세요. 우리의 상호 작용이 서로에게 도움이 되기를 바랍니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>상호 이익을 위해 동맹을 공식화합시다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 당신의 조건을 수락합니다. 새로운 평화 시대를 시작합시다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 이 조건을 받아들일 수 없습니다. 나중에 다시 협상할 수 있기를 바랍니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 평화 회복에 관심이 있습니다. 조건을 논의할까요?</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 당신의 개방국경 제안을 수락합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 지금 국경을 개방할 수 없습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 상호 경제적 이익을 위해 국경을 개방하자고 제안합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>국경 근처의 군대 증강이 우려됩니다. 설명을 요구합니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 이 거래를 받아들일 수 없습니다.</Text>
+		</Row>
+
+		<Row Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_TEMPLATE_LEADER_ANY" Language="ko_KR">
+			<Text>우리는 이 거래를 수락합니다. 그것은 우리 모두에게 이롭습니다.</Text>
+		</Row>
+</LocalizedText>
+</GameData>

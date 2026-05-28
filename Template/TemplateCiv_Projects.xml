@@ -1,0 +1,30 @@
+<GameData>
+	<Types>
+		<Row Type="PROJECT_CAPITAL_RELOCATION" Kind="KIND_PROJECT"/>
+		<Row Type="PROJECT_DECLARED_EMERGENCY_POWERS" Kind="KIND_PROJECT"/>
+	</Types>
+	<Projects>
+		<Row ProjectType="PROJECT_CAPITAL_RELOCATION" Name="LOC_PROJECT_CAPITAL_RELOCATION_NAME" ShortName="LOC_PROJECT_CAPITAL_RELOCATION_SHORT_NAME" Description="LOC_PROJECT_CAPITAL_RELOCATION_DESCRIPTION" PrereqTech="TECH_RADIO" PrereqDistrict="DISTRICT_TEMPLATE" Cost="1" AdvisorType="ADVISOR_GENERIC"/>
+		<Row ProjectType="PROJECT_DECLARED_EMERGENCY_POWERS" Name="LOC_PROJECT_DECLARED_EMERGENCY_POWERS_NAME" ShortName="LOC_PROJECT_DECLARED_EMERGENCY_POWERS_SHORT_NAME" Description="LOC_PROJECT_DECLARED_EMERGENCY_POWERS_DESCRIPTION" PrereqTech="TECH_TELECOMMUNICATIONS" PrereqDistrict="DISTRICT_TEMPLATE" Cost="1" RunOnce="1" AdvisorType="ADVISOR_CONQUEST"/>
+	</Projects>
+	<Projects_XP2>
+		<Row ProjectType="PROJECT_CAPITAL_RELOCATION" MaxSimultaneousInstances="1"/>
+		<Row ProjectType="PROJECT_DECLARED_EMERGENCY_POWERS" MaxSimultaneousInstances="1"/>
+	</Projects_XP2>
+	<ProjectCompletionModifiers>
+		<Row ProjectType="PROJECT_CAPITAL_RELOCATION" ModifierId="PROJECT_COMPLETION_CAPITAL_RELOCATION"/>
+	</ProjectCompletionModifiers>	
+	<Modifiers>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_CAPITAL_RELOCATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_CAPITAL</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_CAPITAL_RELOCATION</ModifierId>
+			<Name>ProjectType</Name>
+			<Value>PROJECT_CAPITAL_RELOCATION</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

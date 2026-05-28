@@ -1,0 +1,253 @@
+	<BaseGameText>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_NAME">
+			<Text>Template</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_DESCRIPTION">
+			<Text>A forward-thinking civilization that values cultural development and strategic growth.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_TEMPLATE_ADJECTIVE">
+			<Text>Template</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TEMPLATE_LEADER_NAME">
+			<Text>Template Leader</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TEMPLATE_LEADER_QUOTE">
+			<Text>"Progress is achieved through unity, vision, and the dedication of our people."</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_TEMPLATE_LEADER">
+			<Text>An ambitious and visionary leader who guides their civilization toward prosperity. Through strategic planning and cultural advancement, they unite their people in pursuit of common goals. Their leadership emphasizes balanced growth, technological innovation, and cooperation with neighboring civilizations.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_TEMPLATE_LEADER_ABILITY_NAME">
+			<Text>Strategic Vision</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_TEMPLATE_LEADER_ABILITY_DESCRIPTION">
+			<Text>Cities gain +2 Loyalty and +15% Production toward Wonder construction. All units gain +5 Combat Strength. Strategic resources are revealed and provide +2 additional yields when improved.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_TEMPLATE_NAME">
+			<Text>Cultural Heritage</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_TEMPLATE_DESCRIPTION">
+			<Text>Citizens yield bonus Faith, Culture, and Gold per population. Begins with Astrology tech. Unique districts provide +2 Faith adjacency bonus and significant Housing and Amenities.</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_NAME">
+			<Text>Architectural Excellence</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_DESCRIPTION">
+			<Text>Unique buildings provide increased yields and housing. Buildings can be constructed more quickly and provide bonus amenities to cities.</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_TEMPLATE_HOLY_SITE_NAME">
+			<Text>Temple District</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_TEMPLATE_HOLY_SITE_DESCRIPTION">
+			<Text>Replaces the Holy Site. Generates Faith, Science, Production, and Food based on population assigned. A free Great Prophet appears on first construction.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TEMPLATE_NAME">
+			<Text>Elite Guard</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_TEMPLATE_DESCRIPTION">
+			<Text>A powerful melee unit with ranged attack capability. Stronger than comparable units of its era and unlocks special promotions through strategic resource research. Purchased with Faith.</Text>
+		</Row>
+		<Row Tag="LOC_BELIEF_TEMPLATE_NAME">
+			<Text>Shared Purpose</Text>
+		</Row>
+		<Row Tag="LOC_BELIEF_TEMPLATE_DESCRIPTION">
+			<Text>Citizens gain bonus Yield in cities where this belief is prevalent.</Text>
+		</Row>
+		<Row Tag="LOC_RELIGION_TEMPLATE_NAME">
+			<Text>Template Faith</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_1">
+			<Text>Haven</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_2">
+			<Text>Meadow</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_3">
+			<Text>Grove</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_4">
+			<Text>Valley</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_5">
+			<Text>Summit</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_6">
+			<Text>Harbor</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_7">
+			<Text>Tower</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_8">
+			<Text>Bridge</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_9">
+			<Text>Glen</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_10">
+			<Text>Reach</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_11">
+			<Text>Point</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_12">
+			<Text>Stone</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_13">
+			<Text>Crossing</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_14">
+			<Text>Knoll</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_15">
+			<Text>Rest</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_16">
+			<Text>Vale</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_17">
+			<Text>Brook</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_18">
+			<Text>Rise</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_19">
+			<Text>Shire</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_20">
+			<Text>Strand</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_21">
+			<Text>Peak</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_22">
+			<Text>Shore</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_23">
+			<Text>Cliff</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_TEMPLATE_24">
+			<Text>Field</Text>
+		</Row>
+        
+		<Row Tag="LOC_CITIZEN_JOHN">
+			<Text>John</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_MICHAEL">
+			<Text>Michael</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_DAVID">
+			<Text>David</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_ROBERT">
+			<Text>Robert</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_JAMES">
+			<Text>James</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_EMILY">
+			<Text>Emily</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_WILLIAM">
+			<Text>William</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_SARAH">
+			<Text>Sarah</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_CHRISTOPHER">
+			<Text>Christopher</Text>
+		</Row>
+		<Row Tag="LOC_CITIZEN_DANIEL">
+			<Text>Daniel</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_CHAPALA">
+			<Text>Lake Chapala</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_PATZCUARO">
+			<Text>Lake Patzcuaro</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_BACALAR">
+			<Text>Lake Bacalar</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_LAGUNA_CATEMACO">
+			<Text>Laguna Catemaco</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_LAKE_EL_CARACOL">
+			<Text>El Caracol Lake</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME">
+			<Text>Gulf of California</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME">
+			<Text>Gulf of Mexico</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_SONORA">
+			<Text>Sonoran Desert</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_LA_GUAJIRA">
+			<Text>La Guajira Desert</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_DESERT_SECHURA">
+			<Text>Sechura Desert</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA">
+			<Text>Pico de Orizaba</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_TAJUMULCO">
+			<Text>Tajumulco Volcano</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_TACANA">
+			<Text>Tacana Volcano</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_SANTIAGUITO">
+			<Text>Santiaguito Volcano</Text>
+		</Row>
+		<Row Tag="LOC_NAMED_VOLCANO_CHAPARRASTIQUE">
+			<Text>Chaparrastique Volcano</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_UNIT_DESCRIPTION">
+			<Text>Promotions available to the template unit class. Each promotion improves combat, movement, or ranged effectiveness.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_ADVANCE_NAME">
+			<Text>Rapid Deployment</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_ADVANCE_DESCRIPTION">
+			<Text>Grants increased mobility and allows the unit to ignore ranged penalties imposed by districts.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_NAME">
+			<Text>Tactical Strike I</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_I_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 10 and movement by 1.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_NAME">
+			<Text>Tactical Strike II</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_II_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 20 and movement by 1.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_NAME">
+			<Text>Tactical Strike III</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_OFFENSIVE_III_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 20, movement by 1, and anti-air capability.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_I_NAME">
+			<Text>Maneuver I</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_I_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 10 and movement by 1.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_II_NAME">
+			<Text>Maneuver II</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_II_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 20 and movement by 1.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_III_NAME">
+			<Text>Maneuver III</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_TEMPLATE_MOBILITY_III_DESCRIPTION">
+			<Text>Increases this unit's combat strength by 20 and movement by 2.</Text>
+		</Row>
+	</BaseGameText>
+

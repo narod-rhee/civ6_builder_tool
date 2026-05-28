@@ -1,0 +1,56 @@
+<GameData>
+	<Types>
+		<Row Type="RELIGION_TEMPLATE" Kind="KIND_RELIGION"/>
+		<Row Type="BELIEF_TEMPLATE" Kind="KIND_BELIEF"/>
+	</Types>
+
+	<Religions>
+		<Row>
+			<ReligionType>RELIGION_TEMPLATE</ReligionType>
+			<Name>LOC_RELIGION_TEMPLATE_NAME</Name>
+			<IconString>Pc</IconString>
+			<RequiresCustomName>false</RequiresCustomName>
+			<Color>COLOR_STANDARD_RED_DK</Color>
+		</Row>
+	</Religions>
+
+	<FavoredReligions>
+		<Row LeaderType="LEADER_TEMPLATE_LEADER" ReligionType="RELIGION_TEMPLATE"/>
+	</FavoredReligions>
+
+	<Beliefs>
+		<Row BeliefType="BELIEF_TEMPLATE" Name="LOC_BELIEF_TEMPLATE_NAME" Description="LOC_BELIEF_TEMPLATE_DESCRIPTION" BeliefClassType="BELIEF_CLASS_FOLLOWER"/>
+	</Beliefs>
+
+	<BeliefModifiers>
+		<Row BeliefType="BELIEF_TEMPLATE" ModifierId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION"/>
+	</BeliefModifiers>
+
+	<Modifiers>
+		<Row ModifierId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION" ModifierType="MODIFIER_ALL_DISTRICTS_ADJUST_YIELD_BASED_ON_ADJACENCY_BONUS" SubjectRequirementSetId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION_REQUIREMENTS"/>
+	</Modifiers>
+
+	<ModifierArguments>
+		<Row ModifierId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION" Name="YieldTypeToMirror" Value="YIELD_FAITH"/>
+		<Row ModifierId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION" Name="YieldTypeToGrant" Value="YIELD_PRODUCTION"/>
+	</ModifierArguments>
+
+	<RequirementSets>
+		<Row RequirementSetId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION_REQUIREMENTS" RequirementSetType="REQUIREMENTSET_TEST_ALL"/>
+	</RequirementSets>
+
+	<Requirements>
+		<Row RequirementId="REQUIRES_BELIEF_TEMPLATE_DISTRICT_IS_HOLY_SITE" RequirementType="REQUIREMENT_PLOT_DISTRICT_TYPE_MATCHES"/>
+	</Requirements>
+
+	<RequirementArguments>
+		<Row RequirementId="REQUIRES_BELIEF_TEMPLATE_DISTRICT_IS_HOLY_SITE" Name="DistrictType" Value="DISTRICT_HOLY_SITE"/>
+	</RequirementArguments>
+
+	<RequirementSetRequirements>
+		<Row RequirementSetId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION_REQUIREMENTS" RequirementId="REQUIRES_CITY_FOLLOWS_RELIGION"/>
+		<Row RequirementSetId="BELIEF_TEMPLATE_ADJACENCY_PRODUCTION_REQUIREMENTS" RequirementId="REQUIRES_BELIEF_TEMPLATE_DISTRICT_IS_HOLY_SITE"/>
+	</RequirementSetRequirements>
+</GameData>
+
+

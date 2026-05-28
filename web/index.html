@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Icon Forge Tools</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script
+      src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <main class="app">
+      <section class="toolbar">
+        <div class="brand">
+          <div class="brandMark">IF</div>
+          <div>
+            <h1>Icon Forge Tools</h1>
+            <p id="toolMessage">Cropper loading</p>
+          </div>
+        </div>
+        <div class="topActions">
+          <nav class="toolNav" aria-label="Tools">
+            <button type="button" class="active" data-page="cropper">Cropper</button>
+            <button type="button" data-page="templates">Templates</button>
+            <button type="button" data-page="imageLab">Image Lab</button>
+            <button type="button" data-page="agent">Agent</button>
+          </nav>
+          <button type="button" id="themeToggle">Dark</button>
+          <div class="status" id="status">Cropper loading</div>
+        </div>
+      </section>
+
+      <section class="page active" id="cropperPage" data-page-panel="cropper">
+        <section class="cropperWorkspace">
+          <form id="cropperForm" class="panel">
+            <label class="dropzone" for="imageInput">
+              <input id="imageInput" name="image" type="file" accept="image/*" required>
+              <span>Choose source image</span>
+              <strong id="fileName">No file selected</strong>
+            </label>
+
+          <div class="grid two">
+            <label>
+              Profile
+              <select id="mode" name="mode"></select>
+            </label>
+            <label>
+              Base name
+              <input name="base_name" value="ICON_CUSTOM" autocomplete="off">
+            </label>
+          </div>
+
+          <label>
+            Output folder
+            <input name="output_dir" value="output/frontend_icons" autocomplete="off">
+          </label>
+
+          <div class="profileInfo" id="profileInfo"></div>
+
+          <fieldset>
+            <legend>Subject placement</legend>
+            <div class="grid three">
+              <label>
+                Scale %
+                <input name="subject_scale_percent" type="number" value="100" step="1">
+              </label>
+              <label>
+                Vertical offset %
+                <input name="vertical_offset_percent" type="number" value="0" step="1">
+              </label>
+              <label>
+                Horizontal offset %
+                <input name="horizontal_offset_percent" type="number" value="0" step="1">
+              </label>
+              <label>
+                White side scale %
+                <input name="unit_right_scale_percent" type="number" value="100" step="1">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Background removal</legend>
+            <div class="inline">
+              <label class="check">
+                <input name="remove_background" type="checkbox">
+                Remove sampled corner background
+              </label>
+              <label class="check">
+                <input name="despill" type="checkbox" checked>
+                Despill edge color
+              </label>
+              <label class="check">
+                <input name="clean_to_256" type="checkbox" checked>
+                Cleaner output 256 canvas
+              </label>
+            </div>
+            <div class="grid three">
+              <label>
+                Method
+                <select name="background_method">
+                  <option value="advanced" selected>Advanced edge matte</option>
+                  <option value="simple">Simple corner color</option>
+                </select>
+              </label>
+              <label>
+                Tolerance
+                <input name="tolerance" type="number" value="35" min="0" max="441">
+              </label>
+              <label>
+                Feather
+                <input name="feather" type="number" value="2" min="0" step="0.5">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Circle</legend>
+            <div class="inline">
+              <label class="check">
+                <input name="circle_enabled" type="checkbox">
+                Force circular output
+              </label>
+              <label>
+                Background
+                <input name="circle_color" type="color" value="#121212">
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button type="submit" id="generateButton">Generate</button>
+          </div>
+          </form>
+
+          <section class="preview">
+            <div class="imageStage">
+              <img id="previewImage" alt="">
+            </div>
+            <div class="results">
+              <h2>Generated files</h2>
+              <div id="warnings" class="warnings"></div>
+              <div id="files" class="files"></div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section class="page" id="templatesPage" data-page-panel="templates">
+        <section class="templateWorkspace">
+          <form id="templateForm" class="templatePanel">
+            <div>
+              <h2>Template Copilot</h2>
+              <p>Use OpenAI only for safe XML, SQL, and ArtDef placeholder planning while the tool preserves file structure.</p>
+            </div>
+
+            <details class="guideBox" open>
+              <summary>Input guide</summary>
+              <p>Fill only the fields relevant to the files you selected. Pick a file group on the right first, then describe the exact gameplay idea in Copilot brief. Unified output keeps multiple civs/leaders as rows inside the same generated files.</p>
+              <ul>
+                <li>Core Civ: root template files for civilizations, leaders, agendas, colors, config, units, buildings, improvements, districts, governors, projects, religion, and moments SQL.</li>
+                <li>Districts: district XML plus district modifiers. Use it when adding a unique district or district-based ability.</li>
+                <li>Texts: localization files. Use this with Core Civ so names, descriptions, city names, and flavor text are updated together.</li>
+                <li>SQL: SQL-only templates such as moments. Keep SQL changes exact and narrow.</li>
+              </ul>
+            </details>
+
+            <label>
+              Output folder
+              <input name="template_output_dir" value="output/template_copilot" autocomplete="off">
+              <small class="fieldHelp">Where generated XML, SQL, and ArtDef files are written. Relative paths stay inside the tool folder.</small>
+            </label>
+
+            <div class="grid three">
+              <label>
+                Mod code
+                <input name="mod_code" placeholder="NEUTRAL_CIV" autocomplete="off">
+                <small class="fieldHelp">Short uppercase tag used in IDs and filenames, for example NORTHBRIDGE.</small>
+              </label>
+              <label>
+                Civilization count
+                <input id="civCount" name="civilization_count" type="number" value="1" min="1" max="4" step="1">
+                <small class="fieldHelp">Create up to 4 civilization blocks. Each civ gets its own city, citizen, and governor fields.</small>
+              </label>
+              <label>
+                Leader count
+                <input id="leaderCount" name="leader_count" type="number" value="1" min="1" max="8" step="1">
+                <small class="fieldHelp">Create up to 8 leaders. Each leader is tied to one civilization before generation.</small>
+              </label>
+            </div>
+
+            <section class="entityBuilder">
+              <div>
+                <h3>Civilizations</h3>
+                <p>Separate civ boxes keep city names, citizens, and unique governors from mixing into one borscht.</p>
+              </div>
+              <div id="civEntityGrid" class="entityGrid"></div>
+            </section>
+
+            <section class="entityBuilder">
+              <div>
+                <h3>Leaders</h3>
+                <p>Bind every leader to the civilization they belong to. Multiple leaders can point at the same civ.</p>
+              </div>
+              <div id="leaderEntityGrid" class="entityGrid"></div>
+            </section>
+
+            <div class="grid three">
+              <label>
+                Units
+                <textarea name="unit_names" rows="3" placeholder="Elite Guard&#10;Second Unit"></textarea>
+                <small class="fieldHelp">Unit display names. The tool turns them into stable Civ-style identifiers when templates contain matching placeholders.</small>
+              </label>
+              <label>
+                Buildings
+                <textarea name="building_names" rows="3" placeholder="Assembly Hall&#10;Second Building"></textarea>
+                <small class="fieldHelp">Building names for building XML, text, icons, and related replacements.</small>
+              </label>
+              <label>
+                Improvements
+                <textarea name="improvement_names" rows="3" placeholder="Memorial Park&#10;Second Improvement"></textarea>
+                <small class="fieldHelp">Improvement names for improvement gameplay, icons, and localization files.</small>
+              </label>
+              <label>
+                Districts
+                <textarea name="district_names" rows="3" placeholder="Commons District&#10;Harbor Quarter"></textarea>
+                <small class="fieldHelp">District names for unique districts, district modifiers, projects, and localization.</small>
+              </label>
+            </div>
+
+            <div class="grid two">
+              <label>
+                Multi-entity output
+                <select name="output_strategy">
+                  <option value="merge" selected>Unified files (recommended)</option>
+                  <option value="separate">Separate debug folders</option>
+                </select>
+                <small class="fieldHelp">Unified keeps one clean file per selected template family and adds rows for each civ/leader. Separate is only for debugging one variant at a time.</small>
+              </label>
+            </div>
+
+            <label>
+              Copilot brief
+              <textarea name="template_brief" rows="7" placeholder="Describe the civ, leader, abilities, city names, tone, and any exact text you want changed."></textarea>
+              <small class="fieldHelp">Explain the actual mod idea here: abilities, agenda style, tone, city list rules, and which files should change. The AI only plans safe replacements.</small>
+            </label>
+
+            <label>
+              Manual replacements JSON
+              <textarea name="manual_replacements" rows="5" placeholder='{"TEMPLATE_CIVILIZATION": "CIVILIZATION_NORTHBRIDGE", "Template Leader": "John Smith"}'></textarea>
+              <small class="fieldHelp">Optional exact override map. Use this when you know a placeholder must become a specific value.</small>
+            </label>
+
+            <div class="templateActions">
+              <button type="submit">Generate Files</button>
+              <button type="button" id="selectAllTemplates">Select All</button>
+              <button type="button" id="clearTemplates">Clear</button>
+            </div>
+          </form>
+
+          <section class="templatePanel">
+            <div>
+              <h2>Template files</h2>
+              <p id="templateRoot">Loading templates...</p>
+            </div>
+            <label class="uploadLine">
+              Upload template files
+              <input id="templateUpload" type="file" accept=".xml,.sql,.artdef,.txt" multiple>
+              <small class="fieldHelp">Uploaded XML, SQL, or ArtDef files are added to this picker and can be generated into the same unified output model.</small>
+            </label>
+            <div class="templateFilterBar">
+              <button type="button" data-template-filter="core">Core Civ</button>
+              <button type="button" data-template-filter="districts">Districts</button>
+              <button type="button" data-template-filter="texts">Texts</button>
+              <button type="button" data-template-filter="sql">SQL</button>
+            </div>
+            <div id="templateFiles" class="templateFiles"></div>
+          </section>
+
+          <section class="templatePanel templateResults">
+            <div>
+              <h2>Generated Files</h2>
+              <p id="templateStatus">Ready</p>
+            </div>
+            <div id="templateOutputs" class="templateOutputs"></div>
+            <details>
+              <summary>Replacement map</summary>
+              <pre id="replacementMap">{}</pre>
+            </details>
+          </section>
+        </section>
+      </section>
+
+      <section class="page" id="imageLabPage" data-page-panel="imageLab">
+        <section class="imageLabWorkspace">
+          <form id="imagePromptForm" class="templatePanel">
+            <div>
+              <h2>Asset Prompt Lab</h2>
+              <p>Use OpenAI prompts for Civilization icons. Use NovelAI prompts for units, diplomacy backgrounds, and moment pictures. ARX is handled by the Cropper profile.</p>
+            </div>
+
+            <div class="grid two">
+              <label>
+                Asset type
+                <select name="asset_type" id="assetType"></select>
+              </label>
+              <label>
+                Subject
+                <input name="asset_subject" placeholder="Northbridge silver bridge crest, rifle infantry, council hall diplo scene, or victory moment" autocomplete="off">
+              </label>
+            </div>
+
+            <label>
+              Civilization / theme
+              <input name="asset_civilization" placeholder="Free City of Northbridge, blue-gold civic aesthetic" autocomplete="off">
+            </label>
+
+            <label>
+              Visual brief
+              <textarea name="asset_brief" rows="5" placeholder="Describe emblem, artifact, unit equipment, diplomacy environment, moment scene, color palette, faction symbols, shape language, and crop/readability needs."></textarea>
+            </label>
+
+            <div class="grid two">
+              <label>
+                Extra style tags
+                <textarea name="style_tags" rows="4" placeholder="polished metal, enamel inlay, clean silhouette, crisp game icon rendering"></textarea>
+              </label>
+              <label>
+                Avoid
+                <textarea name="avoid_tags" rows="4" placeholder="extra fingers, messy background, text, watermark"></textarea>
+              </label>
+            </div>
+
+            <label>
+              Must include
+              <input name="must_include" placeholder="main symbol readable at 32px, unit silhouette clear, wide 2:1 diplo scene, or square 375 moment" autocomplete="off">
+            </label>
+
+            <div class="templateActions">
+              <button type="submit">Generate Prompt</button>
+              <button type="button" id="copyNovelPrompt">Copy NovelAI</button>
+            </div>
+          </form>
+
+          <section class="templatePanel imagePromptResults">
+            <div>
+              <h2>NovelAI Package</h2>
+              <p id="imagePromptStatus">Ready</p>
+            </div>
+            <label>
+              NovelAI positive prompt
+              <textarea id="novelPositive" rows="8"></textarea>
+            </label>
+            <label>
+              NovelAI undesired content
+              <textarea id="novelNegative" rows="5"></textarea>
+            </label>
+            <div id="novelSettings" class="settingsGrid"></div>
+          </section>
+
+          <section class="templatePanel">
+            <div>
+              <h2>OpenAI Image Creator</h2>
+              <p>Create Civilization icon drafts from the OpenAI prompt, then feed them into the Civilization Icons cropper profile.</p>
+            </div>
+
+            <label>
+              OpenAI image prompt
+              <textarea id="openaiImagePrompt" rows="7"></textarea>
+            </label>
+
+            <div class="templateActions singleSecondary">
+              <button type="button" id="copyOpenAIPrompt">Copy OpenAI</button>
+            </div>
+
+            <div class="grid two">
+              <label>
+                Model
+                <select id="openaiImageModel">
+                  <option value="gpt-image-2" selected>gpt-image-2</option>
+                  <option value="gpt-image-1.5">gpt-image-1.5</option>
+                  <option value="gpt-image-1">gpt-image-1</option>
+                  <option value="gpt-image-1-mini">gpt-image-1-mini</option>
+                </select>
+              </label>
+              <label>
+                Size
+                <select id="openaiImageSize">
+                  <option value="1024x1024">1024x1024</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="grid three">
+              <label>
+                Quality
+                <select id="openaiImageQuality">
+                  <option value="auto" selected>auto</option>
+                  <option value="low">low</option>
+                  <option value="medium">medium</option>
+                  <option value="high">high</option>
+                </select>
+              </label>
+              <label>
+                Background
+                <select id="openaiImageBackground">
+                  <option value="auto" selected>auto</option>
+                  <option value="transparent">transparent</option>
+                  <option value="opaque">opaque</option>
+                </select>
+              </label>
+              <label>
+                Format
+                <select id="openaiImageFormat">
+                  <option value="png" selected>png</option>
+                  <option value="webp">webp</option>
+                  <option value="jpeg">jpeg</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Output folder
+              <input id="openaiImageOutput" value="output/openai_assets" autocomplete="off">
+            </label>
+
+            <button type="button" id="createOpenAIImage">Create Image</button>
+            <div id="openaiImageOutputs" class="files"></div>
+          </section>
+
+          <section class="templatePanel manualPanel">
+            <h2>Instruction Manual</h2>
+            <ol>
+              <li>Choose Civilization Icon for OpenAI. Choose Unit Theme, Diplomacy Background, or Moment Picture for NovelAI.</li>
+              <li>Put exact faction symbols, colors, material, unit equipment, diplo environment, moment scene, shape language, and crop/readability needs in the visual brief.</li>
+              <li>Use OpenAI for hard symbolic Civilization icons. Use the NovelAI positive and undesired prompts for everything else.</li>
+              <li>Use the listed resolution, sampler, steps, and prompt guidance as the starting settings.</li>
+              <li>Generate larger than the final icon, then run the Cropper page afterward.</li>
+              <li>Use the Cropper ARX profile for 54x54 ARX sizing rather than generating ARX in NovelAI.</li>
+            </ol>
+          </section>
+        </section>
+      </section>
+
+      <section class="page" id="agentPage" data-page-panel="agent">
+        <aside class="agentPanel">
+          <div class="agentHeader">
+            <div>
+              <h2>Agent</h2>
+              <p id="eventLine">Loading workspace context...</p>
+            </div>
+            <span class="agentStatus" id="statusPill">Idle</span>
+          </div>
+
+          <div class="agentControls">
+            <button type="button" id="connectButton">Connect</button>
+            <button type="button" id="newSessionButton">New Session</button>
+            <button type="button" id="focusButton">Focus</button>
+          </div>
+
+          <section class="serverPool">
+            <div>
+              <h2>Parallel Servers</h2>
+              <p id="serverPoolStatus">Start extra local servers for parallel agent work.</p>
+            </div>
+            <label>
+              Count
+              <input id="serverPoolCount" type="number" min="1" max="8" value="2">
+            </label>
+            <button type="button" id="startServerPool">Start Servers</button>
+            <div id="serverPoolLinks" class="serverPoolLinks"></div>
+          </section>
+
+          <dl class="agentMeta">
+            <div>
+              <dt>Workflow</dt>
+              <dd id="workflowId">-</dd>
+            </div>
+            <div>
+              <dt>Version</dt>
+              <dd id="workflowVersion">-</dd>
+            </div>
+            <div>
+              <dt>User</dt>
+              <dd id="chatUser">-</dd>
+            </div>
+            <div>
+              <dt>Session</dt>
+              <dd id="sessionId">-</dd>
+            </div>
+          </dl>
+
+          <div class="starterGrid">
+            <button type="button" data-preset="leader">Leader setup</button>
+            <button type="button" data-preset="unit">Unit atlas</button>
+            <button type="button" data-preset="clean">Clean portrait</button>
+            <button type="button" data-prompt="Review this cropper workspace and suggest improvements for icon generation.">Review setup</button>
+            <button type="button" data-prompt="Help me choose settings for a Civilization leader portrait.">Ask leader settings</button>
+            <button type="button" data-prompt="Explain the current workspace files and how this tool is wired.">Explain files</button>
+          </div>
+
+          <div class="workspaceMini">
+            <div>
+              <strong id="workspaceName">Workspace</strong>
+              <p id="workspacePath">Loading...</p>
+            </div>
+            <span id="fileCount">0 files</span>
+          </div>
+
+          <div class="chatFrame" id="chatFrame">
+            <div class="emptyState" id="emptyState">
+              <h2>Connect your agent</h2>
+              <p>Add `OPENAI_API_KEY` and `AGENT_WORKFLOW_ID` to `.env`, then connect.</p>
+            </div>
+          </div>
+
+          <ol id="workspaceFiles"></ol>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

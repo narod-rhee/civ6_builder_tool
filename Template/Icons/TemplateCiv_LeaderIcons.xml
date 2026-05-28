@@ -1,0 +1,20 @@
+<GameData>
+	<IconTextureAtlases>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="32" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_32.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="45" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_45.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="50" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_50.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="55" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_55.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="64" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_64.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="80" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_80.dds"/>
+		<Row Name="ATLAS_ICON_TEMPLATE_LEADER" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="ICON_LEADER_TEMPLATE_256.dds"/>
+	</IconTextureAtlases>
+
+	<IconDefinitions>
+		<Row Name="ICON_LEADER_TEMPLATE" Atlas="ATLAS_ICON_TEMPLATE_LEADER" Index="0"/>
+		<!-- Do not change Atlas or Index for beliefs; the game requires a valid religious icon assignment for the belief to register properly. -->
+		<Row Name="ICON_BELIEF_TEMPLATE" Atlas="ICON_ATLAS_BELIEFS_PATHEON" Index="23"/>
+	</IconDefinitions>
+	
+</GameData>
+
+

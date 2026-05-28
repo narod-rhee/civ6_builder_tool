@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <GameData>
+    <LocalizedText>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_NAME" Language="ko_KR">
+			<Text>총독</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_TITLE" Language="ko_KR">
+			<Text>총독</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_SHORT_TITLE" Language="ko_KR">
+			<Text>총독</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_DESCRIPTION" Language="ko_KR">
+			<Text>경제와 군사 통치에 능한 숙련된 행정가입니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_NAME" Language="ko_KR">
+			<Text>군사 급여 증액</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_DESCRIPTION" Language="ko_KR">
+			<Text>유닛 유지 비용이 5 [ICON_Gold] 골드 줄어들지만, 군사 지출 증가로 인한 예산 압박으로 [ICON_Amenities] 쾌적도가 5 줄어듭니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_NAME" Language="ko_KR">
+			<Text>산업 경제 정책</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_DESCRIPTION" Language="ko_KR">
+			<Text>모든 도시의 [ICON_Gold] 골드 생산량을 100% 늘리지만, 산업 성장으로 인한 도시 부담으로 [ICON_Amenities] 쾌적도가 10 줄어듭니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_NAME" Language="ko_KR">
+			<Text>생산성 강화 프로그램</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_DESCRIPTION" Language="ko_KR">
+			<Text>모든 도시의 [ICON_Production] 생산력을 100% 늘리지만, 증가된 업무 강도로 인한 피로로 [ICON_Amenities] 쾌적도가 15 줄어듭니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_NAME" Language="ko_KR">
+			<Text>수도 이전 사업</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_DESCRIPTION" Language="ko_KR">
+			<Text>라디오 기술을 무료로 제공하고, 다른 도시로 수도 이전이 가능해지는 프로젝트를 해금합니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_NAME" Language="ko_KR">
+			<Text>농업 확대 프로그램</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_DESCRIPTION" Language="ko_KR">
+			<Text>모든 도시의 [ICON_Food] 식량을 100% 늘리지만, 무역 정책 변화로 인해 모든 도시에서 턴당 [ICON_Favor] 외교적 환심이 1 줄어듭니다.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_NAME" Language="ko_KR">
+			<Text>비상 권한</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_DESCRIPTION" Language="ko_KR">
+			<Text>전기 통신 기술을 무료로 제공하고, 제국 전역에 비상 권한을 발동할 수 있는 프로젝트를 해금합니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_NAME" Language="ko_KR">
+			<Text>수도 이전</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_SHORT_NAME" Language="ko_KR">
+			<Text>수도 이전</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_DESCRIPTION" Language="ko_KR">
+			<Text>이 프로젝트가 완료되면, 수도를 이 프로젝트를 완료한 도시로 이전합니다.</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_NAME" Language="ko_KR">
+			<Text>비상 권한 발동</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_SHORT_NAME" Language="ko_KR">
+			<Text>비상 권한 발동</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_DESCRIPTION" Language="ko_KR">
+			<Text>이 프로젝트가 완료되면, 해당 특수지구가 있는 모든 도시에 무료 군사 유닛이 등장합니다. 안정화 노력 우선으로 인해 모든 생산량이 50% 감소하며, 10턴 동안 유지됩니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION" Language="ko_KR">
+			<Text>수도 이전: 전략적 재편성</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION_DESCRIPTION" Language="ko_KR">
+			<Text>전략적 행정 구조 개편의 일환으로 수도가 {CityName}(으)로 이전되었습니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION_INSTANCE_DESCRIPTION" Language="ko_KR">
+			<Text>수도 이전이 {CityName}(으)로 적절한 효율성을 가지고 진행되었으며, 목표를 달성했으나 미미한 혼란이 있었습니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS" Language="ko_KR">
+			<Text>비상 권한: 위기 대응</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS_DESCRIPTION" Language="ko_KR">
+			<Text>국가 안정성을 위협하는 중대한 상황에 대처하기 위해 비상 권한이 발동되었습니다.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS_INSTANCE_DESCRIPTION" Language="ko_KR">
+			<Text>이 위기 기간 동안 국가를 안정시키기 위해 비상 조치가 시행되었습니다.</Text>
+		</Row>
+	</LocalizedText>
+    </GameData>

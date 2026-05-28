@@ -1,0 +1,42 @@
+<GameInfo>
+	<!-- Config -->
+	<Players>
+		<Row
+			CivilizationType="CIVILIZATION_TEMPLATE"
+			LeaderType="LEADER_TEMPLATE"
+			CivilizationName="LOC_CIVILIZATION_TEMPLATE_NAME"
+			CivilizationIcon="ICON_CIVILIZATION_TEMPLATE"
+			LeaderName="LOC_LEADER_TEMPLATE_NAME"
+			LeaderIcon="ICON_LEADER_TEMPLATE"
+			CivilizationAbilityName="LOC_TRAIT_CIVILIZATION_TEMPLATE_NAME"
+			CivilizationAbilityDescription="LOC_TRAIT_CIVILIZATION_TEMPLATE_DESCRIPTION"
+			CivilizationAbilityIcon="ICON_CIVILIZATION_TEMPLATE"
+			LeaderAbilityName="LOC_TRAIT_LEADER_TEMPLATE_NAME"
+			LeaderAbilityDescription="LOC_TRAIT_LEADER_TEMPLATE_DESCRIPTION"
+			LeaderAbilityIcon="ICON_LEADER_TEMPLATE"
+			Portrait="LEADER_TEMPLATE_NEUTRAL"
+			PortraitBackground="LEADER_TEMPLATE_BACKGROUND"/>
+	</Players>
+
+	<PlayerItems>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" LeaderType="LEADER_TEMPLATE" Type="IMPROVEMENT_TEMPLATE" Icon="ICON_IMPROVEMENT_TEMPLATE" Name="LOC_IMPROVEMENT_TEMPLATE_NAME" Description="LOC_IMPROVEMENT_TEMPLATE_DESCRIPTION" SortIndex="10"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" LeaderType="LEADER_TEMPLATE" Type="UNIT_TEMPLATE" Icon="ICON_UNIT_TEMPLATE" Name="LOC_UNIT_TEMPLATE_NAME" Description="LOC_UNIT_TEMPLATE_DESCRIPTION" SortIndex="20"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" LeaderType="LEADER_TEMPLATE" Type="BUILDING_TEMPLATE" Icon="ICON_BUILDING_TEMPLATE" Name="LOC_BUILDING_TEMPLATE_NAME" Description="LOC_BUILDING_TEMPLATE_DESCRIPTION" SortIndex="30"/>
+	</PlayerItems>
+
+	<PlayerColors>
+		<Row>
+			<Type>LEADER_TEMPLATE</Type>
+			<Usage>Unique</Usage>
+			<PrimaryColor>COLOR_STANDARD_TEMPLATE_1</PrimaryColor>
+			<SecondaryColor>COLOR_STANDARD_TEMPLATE_2</SecondaryColor>
+			<Alt1PrimaryColor>COLOR_STANDARD_TEMPLATE_3</Alt1PrimaryColor>
+			<Alt1SecondaryColor>COLOR_STANDARD_TEMPLATE_4</Alt1SecondaryColor>
+			<Alt2PrimaryColor>COLOR_STANDARD_TEMPLATE_5</Alt2PrimaryColor>
+			<Alt2SecondaryColor>COLOR_STANDARD_TEMPLATE_6</Alt2SecondaryColor>
+			<Alt3PrimaryColor>COLOR_STANDARD_TEMPLATE_7</Alt3PrimaryColor>
+			<Alt3SecondaryColor>COLOR_STANDARD_TEMPLATE_8</Alt3SecondaryColor>
+		</Row>
+	</PlayerColors>
+</GameInfo>
+

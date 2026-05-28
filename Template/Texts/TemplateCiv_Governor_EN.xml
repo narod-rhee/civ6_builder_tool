@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BaseGameText>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_NAME">
+			<Text>Governor</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_TITLE">
+			<Text>Governor</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_SHORT_TITLE">
+			<Text>Governor</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_TEMPLATE_DESCRIPTION">
+			<Text>A skilled administrator focused on economic and military governance.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_NAME">
+			<Text>Increased Military Salary</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MILITARY_SALARY_DESCRIPTION">
+			<Text>Reduces unit maintenance fees by 5 [ICON_Gold] Gold, but reduces [ICON_Amenities] Amenities by 5 as increased military spending strains the budget.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_NAME">
+			<Text>Industrial Economic Initiative</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_INDUSTRIAL_INITIATIVE_DESCRIPTION">
+			<Text>Increases [ICON_Gold] Gold output of all cities by 100%, but reduces [ICON_Amenities] Amenities by 10 as industrial growth creates urban strain.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_NAME">
+			<Text>Productivity Enhancement Program</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_PRODUCTIVITY_DRIVE_DESCRIPTION">
+			<Text>Increases [ICON_Production] Production output of all cities by 100%, but reduces [ICON_Amenities] Amenities by 15 as citizens experience fatigue from increased work demands.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_NAME">
+			<Text>Capital Relocation Project</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_CAPITAL_RELOCATION_DESCRIPTION">
+			<Text>Grants the empire free Radio technology, and unlocks a project where the capital can be moved to another city.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_NAME">
+			<Text>Agricultural Expansion Program</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_AGRICULTURAL_EXPANSION_DESCRIPTION">
+			<Text>Increases [ICON_Food] Food output of all cities by 100%, but reduces [ICON_Favor] Diplomatic Favor per turn by 1 in all cities due to trade policy shifts.</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_NAME">
+			<Text>Emergency Authority Powers</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_EMERGENCY_POWERS_DESCRIPTION">
+			<Text>Grants the empire free Telecommunications technology, and unlocks a project for emergency powers that can be enacted across the empire.</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_NAME">
+			<Text>Relocate the Capital</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_SHORT_NAME">
+			<Text>Relocate the Capital</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_CAPITAL_RELOCATION_DESCRIPTION">
+			<Text>When this project is completed, the capital is relocated to the city that has completed this project.</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_NAME">
+			<Text>Declare Emergency Powers</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_SHORT_NAME">
+			<Text>Declare Emergency Powers</Text>
+		</Row>
+		<Row Tag="LOC_PROJECT_EMERGENCY_POWERS_DESCRIPTION">
+			<Text>When this project is completed, free units spawn for all eligible districts in the empire. Reduces all city output by 50% for the next 10 turns as stabilization efforts take priority.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION">
+			<Text>Capital Relocated: Strategic Repositioning</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION_DESCRIPTION">
+			<Text>The capital was relocated to {CityName} as part of a strategic administrative restructuring.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_CAPITAL_RELOCATION_INSTANCE_DESCRIPTION">
+			<Text>The relocation of the capital to {CityName} proceeded with reasonable efficiency, achieving the objective with minor disruptions.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS">
+			<Text>Emergency Powers: Crisis Response</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS_DESCRIPTION">
+			<Text>Emergency powers were declared to address a critical situation affecting national stability.</Text>
+		</Row>
+		<Row Tag="LOC_MOMENT_PROJECT_DECLARED_EMERGENCY_POWERS_INSTANCE_DESCRIPTION">
+			<Text>Emergency measures were enacted to stabilize the nation during this period of crisis.</Text>
+		</Row>
+	</BaseGameText>
+</GameData>

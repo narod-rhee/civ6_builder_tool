@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Types>
+		<Row Type="CIVILIZATION_TEMPLATE" Kind="KIND_CIVILIZATION"/>
+		<Row Type="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_BUILDING_TEMPLATE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_DISTRICT_TEMPLATE" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_CIVILIZATION_UNIT_TEMPLATE" Kind="KIND_TRAIT"/>
+	</Types>
+	<Civilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" Name="LOC_CIVILIZATION_TEMPLATE_NAME" Description="LOC_CIVILIZATION_TEMPLATE_DESCRIPTION" Adjective="LOC_CIVILIZATION_TEMPLATE_ADJECTIVE" StartingCivilizationLevelType="CIVILIZATION_LEVEL_FULL_CIV" RandomCityNameDepth="24" Ethnicity="ETHNICITY_ASIAN"/>
+	</Civilizations>
+	<CivilizationLeaders>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" LeaderType="LEADER_TEMPLATE_LEADER" CapitalName="LOC_CITY_NAME_TEMPLATE_1"/>
+	</CivilizationLeaders>
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" Name="LOC_TRAIT_CIVILIZATION_TEMPLATE_NAME" Description="LOC_TRAIT_CIVILIZATION_TEMPLATE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_BUILDING_TEMPLATE" Name="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_TEMPLATE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_DISTRICT_TEMPLATE" Name="LOC_TRAIT_CIVILIZATION_DISTRICT_TEMPLATE_NAME" Description="LOC_TRAIT_CIVILIZATION_DISTRICT_TEMPLATE_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_TEMPLATE" Name="LOC_UNIT_TEMPLATE_NAME" Description="LOC_UNIT_TEMPLATE_DESCRIPTION"/>
+	</Traits>
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TraitType="TRAIT_CIVILIZATION_BUILDING_TEMPLATE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TraitType="TRAIT_CIVILIZATION_DISTRICT_TEMPLATE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TraitType="TRAIT_CIVILIZATION_UNIT_TEMPLATE"/>
+	</CivilizationTraits>
+	<CityNames>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_1"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_2"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_3"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_4"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_5"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_6"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_7"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_8"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_9"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_10"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_11"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_12"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_13"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_14"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_15"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_16"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_17"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_18"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_19"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_20"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_21"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_22"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_23"/>
+        <Row CivilizationType="CIVILIZATION_TEMPLATE" CityName="LOC_CITY_NAME_TEMPLATE_24"/>
+	</CityNames>
+	<CivilizationCitizenNames>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_JOHN" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_MICHAEL" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_DAVID" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_ROBERT" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_JAMES" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_EMILY" Female="1"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_WILLIAM" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_SARAH" Female="1"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_CHRISTOPHER" Female="0"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" CitizenName="LOC_CITIZEN_DANIEL" Female="0"/>
+	</CivilizationCitizenNames>
+
+	<StartBiasTerrains>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TerrainType="TERRAIN_PLAINS" Tier="1"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" TerrainType="TERRAIN_GRASS" Tier="5"/>
+	</StartBiasTerrains>
+	<StartBiasFeatures>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" FeatureType="FEATURE_FLOODPLAINS" Tier="4"/>
+	</StartBiasFeatures>
+	<StartBiasResources>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" ResourceType="RESOURCE_JADE" Tier="3"/>
+	</StartBiasResources>
+	<StartBiasRivers>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" Tier="2"/>
+	</StartBiasRivers>
+	<NamedRiverCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_GRANDE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_USUMACINTA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_NAZAS"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_AGUANAVAL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_BALSAS"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_CULIACAN"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_LERMA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_GRANDE_DE_SANTIAGO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_FUERTE"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedRiverType="NAMED_RIVER_CONCHOS"/>
+	</NamedRiverCivilizations>
+	<NamedLakes>
+		<Row NamedLakeType="NAMED_LAKE_CHAPALA" Name="LOC_NAMED_LAKE_CHAPALA"/>
+		<Row NamedLakeType="NAMED_LAKE_PATZCUARO" Name="LOC_NAMED_LAKE_PATZCUARO"/>
+		<Row NamedLakeType="NAMED_LAKE_BACALAR" Name="LOC_NAMED_LAKE_BACALAR"/>
+		<Row NamedLakeType="NAMED_LAKE_LAGUNA_CATEMACO" Name="LOC_NAMED_LAKE_LAGUNA_CATEMACO"/>
+		<Row NamedLakeType="NAMED_LAKE_EL_CARACOL" Name="LOC_NAMED_LAKE_EL_CARACOL"/>
+	</NamedLakes>
+	<NamedLakeCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_LAKE_TEXCOCO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_CHAPALA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_PATZCUARO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_BACALAR"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_LAGUNA_CATEMACO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedLakeType="NAMED_LAKE_EL_CARACOL"/>
+	</NamedLakeCivilizations>
+	<NamedSeas>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_CALIFORNIA" Name="LOC_NAMED_SEA_GULF_OF_CALIFORNIA_NAME"/>
+		<Row NamedSeaType="NAMED_SEA_GULF_OF_MEXICO" Name="LOC_NAMED_SEA_GULF_OF_MEXICO_NAME"/>
+	</NamedSeas>
+	<NamedSeaCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_GULF_OF_CALIFORNIA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedSeaType="NAMED_SEA_GULF_OF_MEXICO"/>
+	</NamedSeaCivilizations>
+	<NamedDeserts>
+		<Row NamedDesertType="NAMED_DESERT_SONORAN" Name="LOC_NAMED_DESERT_SONORA"/>
+		<Row NamedDesertType="NAMED_DESERT_LA_GUAJIRA" Name="LOC_NAMED_DESERT_LA_GUAJIRA"/>
+		<Row NamedDesertType="NAMED_DESERT_SECHURA" Name="LOC_NAMED_DESERT_SECHURA"/>
+	</NamedDeserts>
+	<NamedDesertCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_SONORAN"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_LA_GUAJIRA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedDesertType="NAMED_DESERT_SECHURA"/>
+	</NamedDesertCivilizations>
+	<NamedVolcanoes>
+		<Row NamedVolcanoType="NAMED_VOLCANO_PICO_DE_ORIZABA" Name="LOC_NAMED_VOLCANO_PICO_DE_ORIZABA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_TAJUMULCO" Name="LOC_NAMED_VOLCANO_TAJUMULCO"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_TACANA" Name="LOC_NAMED_VOLCANO_TACANA"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_SANTIAGUITO" Name="LOC_NAMED_VOLCANO_SANTIAGUITO"/>
+		<Row NamedVolcanoType="NAMED_VOLCANO_CHAPARRASTIQUE" Name="LOC_NAMED_VOLCANO_CHAPARRASTIQUE"/>
+	</NamedVolcanoes>
+	<NamedVolcanoCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_PICO_DE_ORIZABA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_TAJUMULCO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_TACANA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_SANTIAGUITO"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedVolcanoType="NAMED_VOLCANO_CHAPARRASTIQUE"/>
+	</NamedVolcanoCivilizations>
+	<NamedMountainCivilizations>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_CORDILLERA_NEOVOLCANICA"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_MEXICAN_PLATEAU"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_OCCIDENTAL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_DEL_SUR"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_SIERRA_MADRE_ORIENTAL"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_CHIAPAS"/>
+		<Row CivilizationType="CIVILIZATION_TEMPLATE" NamedMountainType="NAMED_MOUNTAIN_MONTANAS_GUATEMALA"/>
+	</NamedMountainCivilizations>
+
+	<TraitModifiers>
+		<Row TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" ModifierId="TEMPLATE_POPULATION_GOLD_YIELD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" ModifierId="TEMPLATE_POPULATION_FAITH_YIELD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" ModifierId="TEMPLATE_POPULATION_SCIENCE_YIELD"/>
+		<Row TraitType="TRAIT_CIVILIZATION_TEMPLATE_ABILITY" ModifierId="TEMPLATE_POPULATION_CULTURE_YIELD"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Row ModifierId="TEMPLATE_POPULATION_GOLD_YIELD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION"/>
+		<Row ModifierId="TEMPLATE_POPULATION_FAITH_YIELD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION"/>
+		<Row ModifierId="TEMPLATE_POPULATION_SCIENCE_YIELD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION"/>
+		<Row ModifierId="TEMPLATE_POPULATION_CULTURE_YIELD" ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_PER_POPULATION"/>
+	</Modifiers>
+	<ModifierArguments>
+		<Row ModifierId="TEMPLATE_POPULATION_CULTURE_YIELD" Name="YieldType" Value="YIELD_CULTURE"/>
+		<Row ModifierId="TEMPLATE_POPULATION_CULTURE_YIELD" Name="Amount" Value="5"/>
+		<Row ModifierId="TEMPLATE_POPULATION_SCIENCE_YIELD" Name="YieldType" Value="YIELD_SCIENCE"/>
+		<Row ModifierId="TEMPLATE_POPULATION_SCIENCE_YIELD" Name="Amount" Value="5.5"/>
+		<Row ModifierId="TEMPLATE_POPULATION_GOLD_YIELD" Name="YieldType" Value="YIELD_GOLD"/>
+		<Row ModifierId="TEMPLATE_POPULATION_GOLD_YIELD" Name="Amount" Value="30"/>
+		<Row ModifierId="TEMPLATE_POPULATION_FAITH_YIELD" Name="YieldType" Value="YIELD_FAITH"/>
+		<Row ModifierId="TEMPLATE_POPULATION_FAITH_YIELD" Name="Amount" Value="5"/>
+	</ModifierArguments>
+</GameData>
